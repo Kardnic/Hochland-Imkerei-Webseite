@@ -1,0 +1,53 @@
+.angebot-container {
+  padding: 20px;
+  text-align: center;
+}
+
+.angebot-einleitung {
+  max-width: 800px;
+  margin: 0 auto 30px auto;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+.angebot-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  justify-items: center;
+  margin-bottom: 30px;
+}
+
+.produkt-kachel {
+  background: #fffef5;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+  padding: 15px;
+  width: 100%;
+  max-width: 320px;
+  transition: transform 0.2s ease;
+}
+
+.produkt-kachel:hover {
+  transform: scale(1.03);
+}
+
+.produkt-bild {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.produkt-kachel h3 {
+  color: #2e7d32;
+  margin-bottom: 10px;
+}
+
+.angebot-hinweis {
+  font-weight: bold;
+  margin-top: 20px;
+  color: #444;
+}
