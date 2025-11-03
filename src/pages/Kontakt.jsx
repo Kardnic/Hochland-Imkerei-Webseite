@@ -35,7 +35,7 @@ export default function Kontakt() {
           Kontaktformular oder schreib uns direkt per E-Mail:
         </p>
         <p className="email-hinweis">
-          📧 <a href="mailto:hochland-imkerei@beispiel.de">hochland-imkerei@beispiel.de</a>
+          📧 <a href="mailto:hochlandimkereiheistern@freenet.de">Hochland Imkerei Heistern</a>
         </p>
 
         <form className="kontakt-formular" onSubmit={handleSubmit}>
