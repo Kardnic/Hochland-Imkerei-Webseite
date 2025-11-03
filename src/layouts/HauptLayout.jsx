@@ -55,6 +55,18 @@ export default function HauptLayout({ children, hideRight = false, rightContent 
             <>
               {location.pathname === "/fortbildungen" ? null : (
                 <>
+                {location.pathname === "/ueberUns" && (
+          <div className="kachel fortbildung-kachel">
+            <h3>Fortbildungen</h3>
+            <p>
+              Wir bilden uns regelmäßig weiter, um unsere Imkerei nachhaltig und
+              fachgerecht zu führen.
+            </p>
+            <a href="/fortbildungen" className="kachel-button">
+              ➜ Zu den Fortbildungen
+            </a>
+          </div>
+        )}
                   <div className="kachel">
                     <h3>Hier findet ihr uns</h3>
                     <iframe
