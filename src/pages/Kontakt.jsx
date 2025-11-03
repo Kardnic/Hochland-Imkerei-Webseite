@@ -8,21 +8,32 @@ export default function Kontakt() {
     email: "",
     nachricht: "",
   });
+  const [status, setStatus] = useState(null);
 
-  const [success, setSuccess] = useState(false);
-
-  const handleChange = (e) => {
+  const handleChange = (e) =>
     setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    setStatus("loading");
 
-    // Hier später Mail-Service oder API-Aufruf einfügen
-    console.log("Gesendet:", formData);
+    try {
+      const res = await fetch("https://contact-form-worker.svenliedtke14.workers.dev", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
 
-    setSuccess(true);
-    setFormData({ name: "", email: "", nachricht: "" });
+      if (res.ok) {
+        setStatus("success");
+        setFormData({ name: "", email: "", nachricht: "" });
+      } else {
+        setStatus("error");
+      }
+    } catch (err) {
+      console.error(err);
+      setStatus("error");
+    }
   };
 
   return (
@@ -30,12 +41,11 @@ export default function Kontakt() {
       <div className="kontakt-container">
         <h1>Kontakt</h1>
         <p>
-          Du möchtest uns eine Nachricht schicken, hast Fragen zu unseren Honigen
-          oder interessierst dich für unsere Imkerei? Dann nutze gerne das
-          Kontaktformular oder schreib uns direkt per E-Mail:
-        </p>
-        <p className="email-hinweis">
-          📧 <a href="mailto:hochlandimkereiheistern@freenet.de">Hochland Imkerei Heistern</a>
+          Du möchtest uns eine Nachricht schicken? Nutze das Formular oder schreib
+          direkt an{" "}
+          <a href="mailto:contact@hochland-imkerei-heistern.de">
+            Hochland Imkerei Heistern
+          </a>.
         </p>
 
         <form className="kontakt-formular" onSubmit={handleSubmit}>
@@ -72,12 +82,19 @@ export default function Kontakt() {
             />
           </label>
 
-          <button type="submit">Nachricht senden</button>
+          <button type="submit" disabled={status === "loading"}>
+            {status === "loading" ? "Senden..." : "Nachricht senden"}
+          </button>
         </form>
 
-        {success && (
+        {status === "success" && (
           <p className="erfolgsmeldung">
-            ✅ Vielen Dank für deine Nachricht! Wir melden uns bald bei dir.
+            ✅ Vielen Dank! Deine Nachricht wurde erfolgreich versendet.
+          </p>
+        )}
+        {status === "error" && (
+          <p className="fehlermeldung">
+            ❌ Beim Senden ist ein Fehler aufgetreten. Bitte versuche es später erneut.
           </p>
         )}
       </div>
