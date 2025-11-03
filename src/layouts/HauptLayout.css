@@ -1,0 +1,464 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: blanchedalmond;
+}
+
+.rahmen {
+  width: 90%;
+  max-width: 1200px;
+  margin: 2rem auto;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: auto auto 1fr auto;
+  gap: 10px;
+  background-color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+h1{
+    text-align: center;
+}
+h2{
+    text-align: center;    
+}
+h3{
+    text-align: center;    
+}
+
+.logo img {
+  width: 180px;
+  height: auto;
+}
+
+.navigation {
+  grid-column: 1 / span 2;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 10px;
+  background-color: forestgreen;
+}
+
+.navigation a,
+.navigation summary {
+  color: white;
+  background-color: gray;
+  padding: 6px 12px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 1rem;
+  line-height: 1.2;
+  white-space: nowrap; /* verhindert Umbruch im Button */
+  display: inline-block;
+  min-width: 100px; /* einheitliche Mindestbreite */
+  text-align: center;
+  transition: background-color 0.2s ease;
+}
+
+.navigation a:hover,
+.navigation summary:hover {
+  background-color: #575757;
+}
+
+/* Dropdown-Menüs */
+.navigation details {
+  position: relative;
+}
+
+.navigation .dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  list-style: none;
+  padding: 5px 0;
+  margin: 0;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  display: none;
+  min-width: 120px;
+  z-index: 100;
+}
+
+.navigation details[open] .dropdown {
+  display: block;
+}
+
+.navigation .dropdown li {
+  padding: 0;
+}
+
+.navigation .dropdown li a {
+  display: block;
+  padding: 6px 12px;
+  color: black;
+  background: transparent;
+  text-align: left;
+  font-size: 0.95rem;
+}
+
+.navigation .dropdown li a:hover {
+  background-color: #f0f0f0;
+}
+
+@media (max-width: 768px) {
+  .navigation {
+    display: flex;
+    flex-direction: column; /* Menü untereinander */
+    align-items: center;
+    background-color: forestgreen;
+    padding: 10px 0;
+    gap: 6px;
+  }
+
+  .navigation a,
+  .navigation summary {
+    min-width: 60%;
+    text-align: center;
+    padding: 8px;
+    border-radius: 6px;
+    background-color: gray;
+    color: white;
+    font-size: 1rem;
+  }
+
+  .navigation a:hover,
+  .navigation summary:hover {
+    background-color: #575757;
+  }
+
+  /* Dropdowns untereinander – sauber eingerückt */
+  .navigation .dropdown {
+    position: static;
+    background-color: white;
+    box-shadow: none;
+    border-radius: 6px;
+    width: 60%;
+    text-align: center;
+    margin-top: 2px;
+  }
+
+  .navigation .dropdown li a {
+    color: black;
+    font-size: 0.95rem;
+    padding: 6px;
+    display: block;
+    border-radius: 5px;
+  }
+
+  .navigation .dropdown li a:hover {
+    background-color: #eee;
+  }
+}
+
+
+.inhalt-links {
+  padding: 20px;
+  text-align: left;
+}
+
+.seite-rechts {
+  background-color: #8d8383;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.kachel {
+  background-color: white;
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.google-map {
+  width: 100%;
+  height: 200px;
+  border-radius: 5px;
+  border: none;
+}
+
+.footer {
+  grid-column: 1 / span 2;
+  text-align: center;
+  background-color: green;
+  color: white;
+  padding: 10px;
+}
+.kopf {
+  grid-column: 1 / span 2;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Logo nach links */
+  padding: 10px 20px;
+  background-color: white;
+}
+
+.logo img {
+  width: 160px;
+  height: auto;
+  display: block;
+}
+
+/* Headerbild unter dem Logo */
+.headerbild {
+  grid-column: 1 / span 2;
+  width: 100%;
+  height: 250px; /* etwas höher als vorher */
+  overflow: hidden;
+  position: relative;
+  border-bottom: 2px solid #ccc;
+}
+
+.headerbild img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%; /* Bild leicht nach oben verschoben */
+  display: block;
+}
+
+/* --- MOBILE ANPASSUNG --- */
+@media (max-width: 900px) {
+  .rahmen {
+    grid-template-columns: 1fr; /* nur 1 Spalte */
+    grid-template-rows: auto auto auto auto auto; /* Reihenfolge untereinander */
+  }
+
+  .kopf {
+    justify-content: center; /* Logo mittig auf kleinen Geräten */
+  }
+
+  .headerbild {
+    height: 180px;
+  }
+
+  .navigation {
+    flex-wrap: wrap; /* Menü bricht in mehrere Zeilen */
+    gap: 5px;
+  }
+
+  .seite-rechts {
+    grid-column: 1; /* rechte Spalte rutscht nach unten */
+    background-color: transparent;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .kachel {
+    max-width: 100%;
+    box-shadow: none;
+  }
+
+  .inhalt-links {
+    padding: 15px;
+  }
+
+  .footer {
+    font-size: 0.9rem;
+  }
+}
+
+/* --- BURGER-MENÜ MIT OVERLAY --- */
+/* --- BURGER ICON MIT ANIMATION --- */
+.menu-button {
+  display: none;
+  position: fixed;
+  top: 20px;
+  right: 30px;
+  z-index: 1100;
+  width: 32px;
+  height: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+/* Drei Linien */
+.menu-button span {
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background: rgb(0, 0, 0);
+  border-radius: 2px;
+  left: 0;
+  transition: all 0.3s ease;
+}
+
+/* Positionen der Linien */
+.menu-button span:nth-child(1) {
+  top: 0;
+}
+.menu-button span:nth-child(2) {
+  top: 10px;
+}
+.menu-button span:nth-child(3) {
+  top: 20px;
+}
+
+/* Animation beim Öffnen */
+.menu-button.open span:nth-child(1) {
+  transform: rotate(45deg);
+  top: 10px;
+}
+.menu-button.open span:nth-child(2) {
+  opacity: 0;
+}
+.menu-button.open span:nth-child(3) {
+  transform: rotate(-45deg);
+  top: 10px;
+}
+
+/* Hover-Effekt */
+.menu-button:hover span {
+  background: #adcaaf;
+}
+
+/* Nur auf mobilen Geräten anzeigen */
+@media (max-width: 900px) {
+  .menu-button {
+    display: block;
+  }
+}
+
+
+/* Seitliches Menü (mobil) */
+.side-menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 250px;
+  height: 100%;
+  background-color: forestgreen;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 15px;
+  box-shadow: -4px 0 10px rgba(0, 0, 0, 0.4);
+  transition: right 0.4s ease-in-out, opacity 0.3s ease;
+  z-index: 1051;
+  visibility: hidden;
+  opacity: 0;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #fff #2e7d32;
+}
+
+/* Menü aktiv */
+.side-menu.open {
+  right: 0;
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Overlay (Hintergrundabdunkelung) */
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(2px);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+  z-index: 1050;
+}
+
+/* Overlay sichtbar */
+.menu-overlay.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Links im Menü */
+.side-menu a,
+.side-menu summary {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  padding: 8px;
+  border-radius: 5px;
+  transition: background 0.2s ease;
+}
+
+.side-menu a:hover,
+.side-menu summary:hover {
+  background-color: #4b8b3b;
+}
+
+/* Schließen-Button */
+.close-button {
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  color: white;
+  cursor: pointer;
+  align-self: flex-end;
+  margin-bottom: 10px;
+}
+
+/* Nur auf mobilen Geräten sichtbar */
+@media (max-width: 900px) {
+  .menu-button {
+    display: block;
+  }
+
+  .navigation {
+    display: none;
+  }
+}
+
+/* Desktop */
+@media (min-width: 901px) {
+  .side-menu,
+  .menu-overlay {
+    display: none;
+  }
+}
+/* --- BODY SCROLL SPERREN, WENN MENÜ OFFEN --- */
+body.menu-open {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+}
+.fortbildung-kachel {
+  background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+  border-left: 5px solid forestgreen;
+  text-align: center;
+  color: #333;
+}
+
+.fortbildung-kachel h3 {
+  color: forestgreen;
+  margin-bottom: 0.5rem;
+}
+
+.fortbildung-kachel p {
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+.kachel-button {
+  display: inline-block;
+  background-color: forestgreen;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.2s ease;
+}
+
+.kachel-button:hover {
+  background-color: #2e7d32;
+}

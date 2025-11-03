@@ -1,0 +1,52 @@
+.ueber-container {
+  padding: 20px 30px;
+  line-height: 1.7;
+  color: #333;
+}
+
+.ueber-container h1 {
+  text-align: center;
+  color: forestgreen;
+  margin-bottom: 1rem;
+}
+
+.einleitung {
+  text-align: center;
+  font-size: 1.1rem;
+  max-width: 800px;
+  margin: 0 auto 2rem auto;
+}
+
+.ueber-block {
+  background: #f8f8f8;
+  border-left: 6px solid forestgreen;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.ueber-block h2 {
+  color: forestgreen;
+  margin-top: 0;
+}
+
+.ueber-block p {
+  margin-bottom: 0.8rem;
+}
+
+.gruss {
+  text-align: center;
+  font-style: italic;
+  margin-top: 2rem;
+  color: #444;
+}
+@media (max-width: 768px) {
+  .ueber-container {
+    padding: 15px 20px;
+  }
+
+  .ueber-block {
+    padding: 15px;
+  }
+}

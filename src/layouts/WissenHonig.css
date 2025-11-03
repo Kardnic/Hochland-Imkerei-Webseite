@@ -1,0 +1,40 @@
+.wissen-container {
+  padding: 20px 30px;
+  line-height: 1.7;
+  color: #333;
+}
+
+.wissen-container h1 {
+  text-align: center;
+  color: forestgreen;
+  margin-bottom: 1rem;
+}
+
+.einleitung {
+  text-align: center;
+  font-size: 1.1rem;
+  max-width: 800px;
+  margin: 0 auto 2rem auto;
+}
+
+.wissen-block {
+  background: #f8f8f8;
+  border-left: 6px solid forestgreen;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.wissen-block h2 {
+  color: forestgreen;
+  margin-top: 0;
+}
+
+.wissen-block ol {
+  margin-left: 1.2rem;
+}
+
+.wissen-block li {
+  margin-bottom: 0.5rem;
+}
