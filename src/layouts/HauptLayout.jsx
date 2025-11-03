@@ -72,7 +72,7 @@ export default function HauptLayout({ children, hideRight = false, rightContent 
 
                   <div className="kachel">
                     <h3>Kontakt</h3>
-                    <p>hochland-imkerei@beispiel.de</p>
+                    <p>hochlandimkereiheistern@freenet.de</p>
                   </div>
                 </>
               )}
