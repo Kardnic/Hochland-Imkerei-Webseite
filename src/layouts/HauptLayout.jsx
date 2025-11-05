@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useState } from "react"; // 🆕 useState hinzugefügt
 import { useLocation } from "react-router-dom";
 import "./HauptLayout.css";
 
 export default function HauptLayout({ children, hideRight = false, rightContent = null }) {
   const location = useLocation();
+  const [isMenuOpen, setIsMenuOpen] = useState(false); // 🆕 Zustand fürs Burger-Menü
+
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen); // 🆕 Menü öffnen/schließen
 
   return (
     <div className="rahmen">
@@ -12,6 +15,13 @@ export default function HauptLayout({ children, hideRight = false, rightContent 
         <div className="logo">
           <img src="/Bilder/Biene Neu.jpg" alt="Logo" />
         </div>
+
+        {/* 🆕 Burger-Menü-Button */}
+        <button className="menu-button" onClick={toggleMenu}>
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </header>
 
       {/* Headerbild */}
@@ -19,7 +29,7 @@ export default function HauptLayout({ children, hideRight = false, rightContent 
         <img src="/Bilder/headerBild.jpg" alt="Headerbild" />
       </div>
 
-      {/* Navigation */}
+      {/* Navigation (Desktop) */}
       <nav className="navigation">
         <a href="/">Startseite</a>
         <a href="/ueberUns">Über uns</a>
@@ -41,6 +51,34 @@ export default function HauptLayout({ children, hideRight = false, rightContent 
         <a href="/contact">Kontakt</a>
       </nav>
 
+      {/* 🆕 Mobile Navigation */}
+      {isMenuOpen && (
+        <>
+          <div className="menu-overlay" onClick={toggleMenu}></div>
+          <nav className="side-menu open">
+            <button className="close-button" onClick={toggleMenu}>×</button>
+            <a href="/">Startseite</a>
+            <a href="/ueberUns">Über uns</a>
+            <details>
+              <summary>Wissenswertes</summary>
+              <ul>
+                <li><a href="/wissen_Bienen">Bienen</a></li>
+                <li><a href="/wissen_Honig">Honig</a></li>
+              </ul>
+            </details>
+            <details>
+              <summary>Galerien</summary>
+              <ul>
+                <li><a href="/galerie_Bienen">Bienen</a></li>
+                <li><a href="/galerie_Honig">Honig</a></li>
+              </ul>
+            </details>
+            <a href="/angebot">Angebot</a>
+            <a href="/contact">Kontakt</a>
+          </nav>
+        </>
+      )}
+
       {/* Hauptinhalt */}
       <main className="inhalt-links">{children}</main>
 
@@ -48,25 +86,24 @@ export default function HauptLayout({ children, hideRight = false, rightContent 
       {!hideRight && (
         <aside className="seite-rechts">
           {rightContent ? (
-            /* 🟢 Eigene Kacheln (z. B. von Fortbildungen.jsx) */
             rightContent
           ) : (
-            /* 🟣 Standard-Kacheln für alle anderen Seiten */
             <>
               {location.pathname === "/fortbildungen" ? null : (
                 <>
-                {location.pathname === "/ueberUns" && (
-          <div className="kachel fortbildung-kachel">
-            <h3>Fortbildungen</h3>
-            <p>
-              Wir bilden uns regelmäßig weiter, um unsere Imkerei nachhaltig und
-              fachgerecht zu führen.
-            </p>
-            <a href="/fortbildungen" className="kachel-button">
-              ➜ Zu den Fortbildungen
-            </a>
-          </div>
-        )}
+                  {location.pathname === "/ueberUns" && (
+                    <div className="kachel fortbildung-kachel">
+                      <h3>Fortbildungen</h3>
+                      <p>
+                        Wir bilden uns regelmäßig weiter, um unsere Imkerei
+                        nachhaltig und fachgerecht zu führen.
+                      </p>
+                      <a href="/fortbildungen" className="kachel-button">
+                        ➜ Zu den Fortbildungen
+                      </a>
+                    </div>
+                  )}
+
                   <div className="kachel">
                     <h3>Hier findet ihr uns</h3>
                     <iframe
