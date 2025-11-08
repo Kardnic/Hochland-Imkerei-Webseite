@@ -9,6 +9,7 @@ import GalerieBienen from "./pages/GalerieBienen";
 import GalerieHonig from "./pages/GalerieHonig";
 import Impressum from "./pages/Impressum";
 import Fortbildungen from "./pages/Fortbildungen";
+import Formulare from "./pages/Formulare";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path="/galerie_Honig" element={<GalerieHonig />} />
         <Route path="/impressum" element={<Impressum />} />
         <Route path="/fortbildungen" element={<Fortbildungen />} />
+        <Route path="/formulare" element={<Formulare />} />
       </Routes>
     </Router>
   );
