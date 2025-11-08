@@ -3,7 +3,7 @@ import { Document, Page, pdfjs } from "react-pdf";
 import HauptLayout from "../layouts/HauptLayout";
 import "../layouts/Formulare.css";
 
-// PDF-Worker laden (notwendig für react-pdf)
+// PDF.js Worker konfigurieren
 pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@3.11.174/build/pdf.worker.min.js`;
 
 export default function Formulare() {
@@ -21,7 +21,6 @@ export default function Formulare() {
     { name: "Aufnahmeantrag Seniorenfußball", path: `${baseUrl}/PDFs/aufnahmeantrag_seniorenfussball.pdf` },
   ];
 
-  // Wenn Nutzer Formular auswählt:
   const handleSelect = async (e) => {
     const filePath = e.target.value;
     setSelectedFile(filePath);
@@ -34,12 +33,12 @@ export default function Formulare() {
       const response = await fetch(filePath, { cache: "no-store" });
       if (!response.ok) throw new Error(`HTTP ${response.status}`);
 
-      // ✅ Blob-Objekt erzeugen
-      const blob = await response.blob();
-      setPdfBlob(blob);
+      // ✅ PDF als ArrayBuffer laden
+      const arrayBuffer = await response.arrayBuffer();
+      setPdfBlob({ data: arrayBuffer });
     } catch (err) {
       console.error("Fehler beim Laden:", err);
-      setError("❌ Die PDF konnte nicht geladen werden.");
+      setError("❌ Fehler beim Anzeigen des Dokuments.");
     }
   };
 
