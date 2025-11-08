@@ -12,7 +12,7 @@ export default function Formulare() {
   const [status, setStatus] = useState("");
 
   const formList = [
-    { title: "Anmeldeformular", file: "anmeldung.pdf" },
+    { title: "Anmeldeformular", file: "../public/PDFs/anmeldung.pdf" },
     { title: "Lieferformular", file: "lieferung.pdf" },
     { title: "Qualitätsnachweis", file: "qualitaet.pdf" },
   ];
