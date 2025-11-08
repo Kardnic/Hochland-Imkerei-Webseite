@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Document, Page, pdfjs } from "react-pdf";
 import HauptLayout from "../layouts/HauptLayout";
-import "./Formulare.css";
+import "../layouts/Formulare.css";
 
 // PDF-Worker laden (notwendig für react-pdf)
 pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@3.11.174/build/pdf.worker.min.js`;
