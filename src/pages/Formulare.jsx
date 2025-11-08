@@ -32,6 +32,14 @@ export default function Formulare() {
     setSelectedFile(file?.path || "");
     setPdfUrl(file?.path || null);
   };
+// ✅ Eingaben speichern
+const handleChange = (e) => {
+  const { name, value } = e.target;
+  setFormData((prev) => ({
+    ...prev,
+    [name]: value,
+  }));
+};
 
 
   const onDocumentLoadSuccess = ({ numPages }) => setNumPages(numPages);
