@@ -8,7 +8,16 @@ pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@3.11.174/build/pdf
 
 export default function Formulare() {
   const [selectedFile, setSelectedFile] = useState("");
-  const [pdfUrl, setPdfUrl] = useState(null);
+ const baseUrl = window.location.origin;
+
+const pdfFiles = [
+  { name: "Aufnahmeantrag Seniorenfußball", path: `${baseUrl}/PDFs/Aufnahmeantrag Seniorenfußball.pdf` },
+  { name: "Anlage Rentenversicherung", path: `${baseUrl}/PDFs/Anlage Rentenversicherung.pdf` },
+  { name: "Befreiungsantrag Rentenversicherung", path: `${baseUrl}/PDFs/2025_10_24_Befreiungsantrag Rentenversicherung.pdf` },
+  { name: "Personalfragebogen Minijob", path: `${baseUrl}/PDFs/2025_10_24_Personalfragebogen fur geringfugig (Minijob), kurzfristig Beschaftigte.pdf` },
+  { name: "Waschkosten", path: `${baseUrl}/PDFs/2025_10_24_Waschkosten.pdf` },
+];
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -16,13 +25,7 @@ export default function Formulare() {
   });
   const [numPages, setNumPages] = useState(null);
 
-  const pdfFiles = [
-    { name: "Aufnahmeantrag Seniorenfußball", path: "../PDFs/Aufnahmeantrag Seniorenfußball.pdf" },
-    { name: "Anlage Rentenversicherung", path: "../PDFs/Anlage Rentenversicherung.pdf" },
-    { name: "Befreiungsantrag Rentenversicherung", path: "../PDFs/2025_10_24_Befreiungsantrag Rentenversicherung.pdf" },
-    { name: "Personalfragebogen Minijob", path: "../PDFs/2025_10_24_Personalfragebogen fur geringfugig (Minijob), kurzfristig Beschaftigte.pdf" },
-    { name: "Waschkosten", path: "../PDFs/2025_10_24_Waschkosten.pdf" },
-  ];
+ 
 
   const handleSelect = (e) => {
     const file = pdfFiles.find((f) => f.path === e.target.value);
