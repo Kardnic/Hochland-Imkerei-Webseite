@@ -10,52 +10,44 @@ export default function Formulare() {
   const [selectedFile, setSelectedFile] = useState("");
   const [pdfBlob, setPdfBlob] = useState(null);
   const [numPages, setNumPages] = useState(null);
+  const [error, setError] = useState("");
 
-  // Lokale Basis-URL
   const baseUrl = window.location.origin;
 
-  // Alle Formulare
   const pdfFiles = [
     { name: "Personalfragebogen Minijob", path: `${baseUrl}/PDFs/personalfragebogen_minijob.pdf` },
     { name: "Befreiungsantrag Rentenversicherung", path: `${baseUrl}/PDFs/befreiungsantrag_rentenversicherung.pdf` },
+    { name: "Anlage Rentenversicherung", path: `${baseUrl}/PDFs/anlage_rentenversicherung.pdf` },
     { name: "Waschkosten", path: `${baseUrl}/PDFs/waschkosten.pdf` },
     { name: "Aufnahmeantrag Seniorenfußball", path: `${baseUrl}/PDFs/aufnahmeantrag_seniorenfussball.pdf` },
   ];
 
-  // Datei-Auswahl
+  // Wenn Nutzer Formular auswählt:
   const handleSelect = async (e) => {
     const filePath = e.target.value;
     setSelectedFile(filePath);
-    if (!filePath) {
-      setPdfBlob(null);
-      return;
-    }
+    setError("");
+    setPdfBlob(null);
+
+    if (!filePath) return;
 
     try {
-      const response = await fetch(filePath);
-      if (!response.ok) throw new Error("Fehler beim Laden der PDF");
+      const response = await fetch(filePath, { cache: "no-store" });
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+
+      // ✅ Blob-Objekt erzeugen
       const blob = await response.blob();
       setPdfBlob(blob);
     } catch (err) {
       console.error("Fehler beim Laden:", err);
-      setPdfBlob(null);
+      setError("❌ Die PDF konnte nicht geladen werden.");
     }
-  };
-
-  // Download der aktuell ausgewählten Datei
-  const handleDownload = () => {
-    if (!selectedFile) return;
-    const link = document.createElement("a");
-    link.href = selectedFile;
-    link.download = selectedFile.split("/").pop();
-    link.click();
   };
 
   return (
     <HauptLayout hideRight={true}>
       <div className="formular-container">
         <h1>📄 Interaktive Formulare</h1>
-        <p>Wähle ein Formular aus, um es anzuzeigen oder herunterzuladen.</p>
 
         <div className="formular-select">
           <label htmlFor="formular-auswahl">Wähle ein Formular:</label>
@@ -69,24 +61,22 @@ export default function Formulare() {
           </select>
         </div>
 
-        {pdfBlob ? (
-          <>
-            <div className="pdf-viewer">
-              <Document file={pdfBlob} onLoadSuccess={({ numPages }) => setNumPages(numPages)}>
-                {Array.from(new Array(numPages), (_, i) => (
-                  <Page key={i + 1} pageNumber={i + 1} />
-                ))}
-              </Document>
-            </div>
+        {error && <p style={{ color: "red" }}>{error}</p>}
 
-            <button className="download-btn" onClick={handleDownload}>
-              📥 Formular herunterladen
-            </button>
-          </>
+        {pdfBlob ? (
+          <div className="pdf-viewer">
+            <Document
+              file={pdfBlob}
+              onLoadSuccess={({ numPages }) => setNumPages(numPages)}
+              onLoadError={(err) => setError("❌ Fehler beim Anzeigen des Dokuments.")}
+            >
+              {Array.from(new Array(numPages), (_, i) => (
+                <Page key={i + 1} pageNumber={i + 1} />
+              ))}
+            </Document>
+          </div>
         ) : (
-          <p className="pdf-placeholder">
-            Kein Formular ausgewählt oder Datei konnte nicht geladen werden.
-          </p>
+          !error && <p style={{ color: "gray" }}>Kein Formular ausgewählt.</p>
         )}
       </div>
     </HauptLayout>
