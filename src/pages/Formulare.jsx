@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./Formulare.css";
+import "../layouts/Formulare.css";
 
 export default function Formulare() {
   const [selectedForm, setSelectedForm] = useState(null);
