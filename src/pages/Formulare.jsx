@@ -1,107 +1,136 @@
 import React, { useState } from "react";
-import "../layouts/Formulare.css";
+import { Document, Page, pdfjs } from "react-pdf";
+import { PDFDocument } from "pdf-lib";
+import HauptLayout from "../layouts/HauptLayout";
+import "./Formulare.css";
+
+pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@3.11.174/build/pdf.worker.min.js`;
 
 export default function Formulare() {
-  const [selectedForm, setSelectedForm] = useState(null);
+  const [selectedFile, setSelectedFile] = useState("");
+  const [pdfUrl, setPdfUrl] = useState(null);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    datum: "",
-    nachricht: "",
+    message: "",
   });
-  const [status, setStatus] = useState("");
+  const [numPages, setNumPages] = useState(null);
 
-  const formList = [
-    { title: "Anmeldeformular", file: "../public/PDFs/anmeldung.pdf" },
-    { title: "Lieferformular", file: "lieferung.pdf" },
-    { title: "Qualitätsnachweis", file: "qualitaet.pdf" },
+  const pdfFiles = [
+    { name: "Aufnahmeantrag Seniorenfußball", path: "/PDFs/Aufnahmeantrag Seniorenfußball.pdf" },
+    { name: "Anlage Rentenversicherung", path: "/PDFs/Anlage Rentenversicherung.pdf" },
+    { name: "Befreiungsantrag Rentenversicherung", path: "/PDFs/2025_10_24_Befreiungsantrag Rentenversicherung.pdf" },
+    { name: "Personalfragebogen Minijob", path: "/PDFs/2025_10_24_Personalfragebogen fur geringfugig (Minijob), kurzfristig Beschaftigte.pdf" },
+    { name: "Waschkosten", path: "/PDFs/2025_10_24_Waschkosten.pdf" },
   ];
+
+  const handleSelect = (e) => {
+    const file = pdfFiles.find((f) => f.path === e.target.value);
+    setSelectedFile(file?.path || "");
+    setPdfUrl(file?.path || null);
+  };
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
+  const onDocumentLoadSuccess = ({ numPages }) => setNumPages(numPages);
+
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setStatus("Sende...");
-
-    const formDetails = {
-      ...formData,
-      pdfName: selectedForm,
-    };
+    if (!selectedFile) {
+      alert("Bitte wähle zuerst ein Formular aus.");
+      return;
+    }
 
     try {
-      const response = await fetch("https://contact-form-worker.svenliedtke14.workers.dev/send-form", {
+      // PDF laden
+      const existingPdfBytes = await fetch(selectedFile).then((res) => res.arrayBuffer());
+      const pdfDoc = await PDFDocument.load(existingPdfBytes);
+      const pages = pdfDoc.getPages();
+      const firstPage = pages[0];
+
+      // Text als Wasserzeichen (einfach sichtbar hinzufügen)
+      firstPage.drawText(`Name: ${formData.name}`, { x: 50, y: 700, size: 12 });
+      firstPage.drawText(`E-Mail: ${formData.email}`, { x: 50, y: 685, size: 12 });
+      firstPage.drawText(`Nachricht: ${formData.message}`, { x: 50, y: 670, size: 12 });
+
+      // Neues PDF speichern
+      const pdfBytes = await pdfDoc.save();
+
+      // Lokaler Download
+      const blob = new Blob([pdfBytes], { type: "application/pdf" });
+      const downloadUrl = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = downloadUrl;
+      a.download = selectedFile.split("/").pop().replace(".pdf", "_ausgefüllt.pdf");
+      a.click();
+      URL.revokeObjectURL(downloadUrl);
+
+      // An Cloudflare Worker senden
+      const formDataToSend = new FormData();
+      formDataToSend.append("name", formData.name);
+      formDataToSend.append("email", formData.email);
+      formDataToSend.append("message", formData.message);
+      formDataToSend.append("file", new File([blob], "formular.pdf", { type: "application/pdf" }));
+
+      await fetch("https://contact-form-worker.svenliedtke14.workers.dev/", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formDetails),
+        body: formDataToSend,
       });
 
-      if (response.ok) {
-        setStatus("✅ Formular erfolgreich gesendet!");
-      } else {
-        setStatus("❌ Fehler beim Senden.");
-      }
+      alert("Formular wurde erfolgreich gesendet und heruntergeladen!");
     } catch (error) {
-      setStatus("⚠️ Verbindung fehlgeschlagen.");
+      console.error(error);
+      alert("Fehler beim Verarbeiten oder Senden des Formulars.");
     }
   };
 
   return (
-    <div className="formulare-page">
-      <header className="formulare-header">
-        <h1>Interaktive Formulare</h1>
-        <p>Fülle ein Formular aus und sende es direkt per E-Mail.</p>
-      </header>
+    <HauptLayout hideRight={true}>
+      <div className="formular-seite">
+        <h1>📄 Formulare</h1>
 
-      <div className="formulare-container">
-        {/* Linke Liste mit Formularen */}
-        <aside className="formular-liste">
-          {formList.map((f, i) => (
-            <button
-              key={i}
-              onClick={() => setSelectedForm(f.file)}
-              className={selectedForm === f.file ? "active" : ""}
-            >
-              {f.title}
-            </button>
-          ))}
-        </aside>
+        <div className="dropdown-section">
+          <label htmlFor="form-auswahl">Wähle ein Formular:</label>
+          <select id="form-auswahl" onChange={handleSelect} value={selectedFile}>
+            <option value="">-- Bitte auswählen --</option>
+            {pdfFiles.map((file, idx) => (
+              <option key={idx} value={file.path}>
+                {file.name}
+              </option>
+            ))}
+          </select>
+        </div>
 
-        {/* Rechter Bereich: Formular */}
-        <main className="formular-content">
-          {selectedForm ? (
-            <form onSubmit={handleSubmit} className="formular-form">
-              <h2>{selectedForm}</h2>
+        {pdfUrl && (
+          <div className="pdf-anzeige">
+            <Document file={pdfUrl} onLoadSuccess={onDocumentLoadSuccess}>
+              {Array.from(new Array(numPages), (el, index) => (
+                <Page key={`page_${index + 1}`} pageNumber={index + 1} />
+              ))}
+            </Document>
+          </div>
+        )}
 
-              <label>
-                Name:
-                <input name="name" value={formData.name} onChange={handleChange} required />
-              </label>
+        <form className="formular-eingabe" onSubmit={handleSubmit}>
+          <h2>Formular ausfüllen</h2>
+          <label>
+            Name:
+            <input type="text" name="name" value={formData.name} onChange={handleChange} required />
+          </label>
+          <label>
+            E-Mail:
+            <input type="email" name="email" value={formData.email} onChange={handleChange} required />
+          </label>
+          <label>
+            Nachricht / Anmerkung:
+            <textarea name="message" value={formData.message} onChange={handleChange} rows="4" />
+          </label>
 
-              <label>
-                E-Mail:
-                <input name="email" type="email" value={formData.email} onChange={handleChange} required />
-              </label>
-
-              <label>
-                Datum:
-                <input name="datum" type="date" value={formData.datum} onChange={handleChange} />
-              </label>
-
-              <label>
-                Nachricht:
-                <textarea name="nachricht" value={formData.nachricht} onChange={handleChange}></textarea>
-              </label>
-
-              <button type="submit">📨 Formular senden</button>
-              <p className="status">{status}</p>
-            </form>
-          ) : (
-            <p>Bitte ein Formular aus der Liste auswählen.</p>
-          )}
-        </main>
+          <button type="submit">📨 Formular absenden</button>
+        </form>
       </div>
-    </div>
+    </HauptLayout>
   );
 }

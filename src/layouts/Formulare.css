@@ -78,3 +78,45 @@
   margin-top: 10px;
   font-weight: bold;
 }
+.formular-seite {
+  padding: 20px;
+}
+
+.dropdown-section {
+  margin-bottom: 20px;
+}
+
+.pdf-anzeige {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 20px;
+  background: #fafafa;
+}
+
+.formular-eingabe {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: #f0fff0;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+.formular-eingabe label {
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  background-color: forestgreen;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #3b8a3b;
+}
