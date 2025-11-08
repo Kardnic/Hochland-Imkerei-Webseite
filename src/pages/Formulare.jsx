@@ -17,11 +17,11 @@ export default function Formulare() {
   const [numPages, setNumPages] = useState(null);
 
   const pdfFiles = [
-    { name: "Aufnahmeantrag Seniorenfußball", path: "/PDFs/Aufnahmeantrag Seniorenfußball.pdf" },
-    { name: "Anlage Rentenversicherung", path: "/PDFs/Anlage Rentenversicherung.pdf" },
-    { name: "Befreiungsantrag Rentenversicherung", path: "/PDFs/2025_10_24_Befreiungsantrag Rentenversicherung.pdf" },
-    { name: "Personalfragebogen Minijob", path: "/PDFs/2025_10_24_Personalfragebogen fur geringfugig (Minijob), kurzfristig Beschaftigte.pdf" },
-    { name: "Waschkosten", path: "/PDFs/2025_10_24_Waschkosten.pdf" },
+    { name: "Aufnahmeantrag Seniorenfußball", path: "../PDFs/Aufnahmeantrag Seniorenfußball.pdf" },
+    { name: "Anlage Rentenversicherung", path: "../PDFs/Anlage Rentenversicherung.pdf" },
+    { name: "Befreiungsantrag Rentenversicherung", path: "../PDFs/2025_10_24_Befreiungsantrag Rentenversicherung.pdf" },
+    { name: "Personalfragebogen Minijob", path: "../PDFs/2025_10_24_Personalfragebogen fur geringfugig (Minijob), kurzfristig Beschaftigte.pdf" },
+    { name: "Waschkosten", path: "../PDFs/2025_10_24_Waschkosten.pdf" },
   ];
 
   const handleSelect = (e) => {
