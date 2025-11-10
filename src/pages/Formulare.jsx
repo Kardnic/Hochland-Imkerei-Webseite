@@ -9,7 +9,7 @@ export default function Formulare() {
   const pdfFiles = [
     { name: "Personalfragebogen Minijob", path: `${baseUrl}/PDFs/personalfragebogen_minijob.pdf` },
     { name: "Befreiungsantrag Rentenversicherung", path: `${baseUrl}/PDFs/befreiungsantrag_rentenversicherung.pdf` },
-    { name: "Waschkosten", path: `${baseUrl}/PDFs/test.pdf` },
+    { name: "Waschkosten", path: `${baseUrl}/PDFs/Aufnahmeantrag_Seniorenfußball_online.pdf` },
     { name: "Aufnahmeantrag Seniorenfußball", path: `${baseUrl}/PDFs/aufnahmeantrag_seniorenfussball.pdf` },
   ];
 
