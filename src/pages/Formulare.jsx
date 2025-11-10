@@ -36,9 +36,10 @@ export default function Formulare() {
 
         {selectedFile ? (
           <div className="pdf-viewer">
+            {/* ⚡ Der native Browser-PDF-Viewer */}
             <iframe
               src={selectedFile}
-              title="Formular"
+              title="PDF Formular"
               className="formular-iframe"
             ></iframe>
           </div>
