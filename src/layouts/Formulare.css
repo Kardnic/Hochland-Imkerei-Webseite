@@ -1,122 +1,12 @@
-.formulare-page {
-  min-height: 100vh;
-  background: #f2f8f6;
-  color: #222;
-  font-family: "Segoe UI", sans-serif;
-}
-
-.formulare-header {
-  background-color: #1b5e20;
-  color: white;
-  padding: 2rem;
-  text-align: center;
-}
-
-.formulare-container {
-  display: flex;
-  min-height: 80vh;
-}
-
-.formular-liste {
-  width: 25%;
-  background-color: #e8f5e9;
-  border-right: 2px solid #c8e6c9;
-  display: flex;
-  flex-direction: column;
-  padding: 1rem;
-  gap: 10px;
-}
-
-.formular-liste button {
-  padding: 12px;
-  border: none;
-  border-radius: 5px;
-  background-color: #a5d6a7;
-  cursor: pointer;
-  transition: 0.2s;
-}
-
-.formular-liste button.active,
-.formular-liste button:hover {
-  background-color: #388e3c;
-  color: white;
-}
-
-.formular-content {
-  flex: 1;
-  padding: 2rem;
-}
-
-.formular-form {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.formular-form input,
-.formular-form textarea {
+.pdf-viewer {
+  margin-top: 1rem;
   width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  height: 90vh;
 }
 
-.formular-form button {
-  background-color: #2e7d32;
-  color: white;
-  padding: 10px;
+.formular-iframe {
+  width: 100%;
+  height: 100%;
   border: none;
-  border-radius: 6px;
-  cursor: pointer;
-}
-
-.formular-form button:hover {
-  background-color: #1b5e20;
-}
-
-.status {
-  margin-top: 10px;
-  font-weight: bold;
-}
-.formular-seite {
-  padding: 20px;
-}
-
-.dropdown-section {
-  margin-bottom: 20px;
-}
-
-.pdf-anzeige {
-  border: 1px solid #ccc;
-  padding: 10px;
-  margin-bottom: 20px;
-  background: #fafafa;
-}
-
-.formular-eingabe {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  background: #f0fff0;
-  padding: 20px;
-  border-radius: 10px;
-  border: 1px solid #ccc;
-}
-
-.formular-eingabe label {
-  display: flex;
-  flex-direction: column;
-}
-
-button {
-  background-color: forestgreen;
-  color: white;
-  border: none;
-  padding: 10px;
   border-radius: 8px;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #3b8a3b;
 }
