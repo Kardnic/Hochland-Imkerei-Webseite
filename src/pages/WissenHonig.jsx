@@ -88,8 +88,7 @@ export default function WissenHonig() {
               Konservierungsstoffe oder Zusatzstoffe.
             </li>
             <li>
-              Rohhonig (nicht erhitzt) behält alle Enzyme und Nährstoffe. Wird
-              Honig über 40 °C erwärmt, gehen viele dieser Stoffe verloren.
+              Wird Honig über 40 °C erwärmt, gehen viele Enzyme und Nährstoffe verloren.
             </li>
           </ol>
         </section>
