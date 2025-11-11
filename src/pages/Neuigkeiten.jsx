@@ -10,7 +10,7 @@ export default function Neuigkeiten() {
       
       <h2>Honigprämierung 2025</h2>
       <p className="gallery-item">
-      <img src="/Bilder/Honigprämierung2025.jpg" alt="Urkunde Honigprämierung 2025" onClick={() => setFullscreenSrc("/Bilder/Honigprämierung2025.jpg")}/>
+      <img src="/Bilder/Honigprämierung2025.jpg" alt="Urkunde Honigprämierung 2025" className="galerie-bild" onClick={() => setFullscreenSrc("/Bilder/Honigprämierung2025.jpg")}/>
       </p>
       <p>
         <p>Wir haben mit dem Frühtrachthonig an einer Honigprämierung teilgenommen.</p>
