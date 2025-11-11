@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import HauptLayout from "../layouts/HauptLayout";
 import "../layouts/WissenHonig.css";
 
 export default function WissenWachs() {
+    const [fullscreenSrc, setFullscreenSrc] = useState(null);
   return (
     <HauptLayout>
       <div className="wissen-container">
@@ -24,7 +25,7 @@ export default function WissenWachs() {
             Über einen Hahn, der sich ca. 5cm oberhalb des Bodens befindet, wird dann das Wachs in kleine viereckige Silikonformen gefüllt, die nach der Abkühlung einen kleinen Wachsballen von ca. 1kg ergeben.
             </p>
             <p>
-            <img src="/Bilder/Wachs1.jpg" alt="Wachs Block" />
+            <img src="/Bilder/Wachs1.jpg" alt="Wachs Block" onClick={() => setFullscreenSrc("/Bilder/Wachs1.jpg")}/>
             </p>
             
         </section>
@@ -35,13 +36,13 @@ export default function WissenWachs() {
             Diese Wachsblöcke werden nun wieder eingeschmolzen, so dass das flüssige Wachs in eine Mittelwandpresse eingefüllt werden kann.
             </p>
             <p>
-            <img src="/Bilder/Wachs2.jpg" alt="Wachs flüssig"  />
+            <img src="/Bilder/Wachs2.jpg" alt="Wachs flüssig"  onClick={() => setFullscreenSrc("/Bilder/Wachs2.jpg")}/>
             </p>
             <p>
-            <img src="/Bilder/Wachs3.jpg" alt="Wachs Form" />
+            <img src="/Bilder/Wachs3.jpg" alt="Wachs Form" onClick={() => setFullscreenSrc("/Bilder/Wachs3.jpg")}/>
             </p>
             <p>
-            <img src="/Bilder/Wachs4.jpg" alt="Wachs Rohform" />
+            <img src="/Bilder/Wachs4.jpg" alt="Wachs Rohform" onClick={() => setFullscreenSrc("/Bilder/Wachs4.jpg")}/>
             </p>
             
             
@@ -52,25 +53,31 @@ export default function WissenWachs() {
             Die Mittelwandpresse wird nun für ca. einer Minute geschlossen, damit das Wachs soweit erkaltet, dass die Gießform wieder geöffnet werden kann.
             </p>
             <p>
-            <img src="/Bilder/Wachs5.jpg" alt="Wachs in Presse" />
+            <img src="/Bilder/Wachs5.jpg" alt="Wachs in Presse" onClick={() => setFullscreenSrc("/Bilder/Wachs5.jpg")}/>
             </p>
             
             <p>
             Nun wird die Wachsplatte herausgenommen und mittels einer Schablone in das benötigte Maß geschnitten.   
             </p>
             <p>
-            <img src="/Bilder/Wachs6.jpg" alt="Wachs geschnitten" />
+            <img src="/Bilder/Wachs6.jpg" alt="Wachs geschnitten" onClick={() => setFullscreenSrc("/Bilder/Wachs6.jpg")}/>
             </p>
             
             <p>
             So entstehen Stück für Stück neue Mittelwände, aus dem Wachs unserer eigenen Bienen.   
             </p>
             <p>
-            <img src="/Bilder/Wachs7.jpg" alt="Wachs Mittelwände" />
+            <img src="/Bilder/Wachs7.jpg" alt="Wachs Mittelwände" onClick={() => setFullscreenSrc("/Bilder/Wachs7.jpg")}/>
             </p>
             
         </section>
       </div>
+      {fullscreenSrc && (
+          <div className="fullscreen-overlay" onClick={() => setFullscreenSrc(null)}>
+            <span className="close-button">&times;</span>
+            <img src={fullscreenSrc} alt="Vollbild" className="fullscreen-image" />
+          </div>
+        )}
     </HauptLayout>
   );
 }
