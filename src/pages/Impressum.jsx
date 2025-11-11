@@ -20,9 +20,9 @@ export default function Impressumg() {
 <p>Jürgen Liedtke</p>
 </section>
 <section>
-  <p></p>Kontakt:
-Telefon: 02423-6323
-E-Mail: hochlandimkereiheistern@freenet.de
+  <h3>Kontakt</h3>
+  <p>Telefon: 02423-6323</p>
+  <p>E-Mail: hochlandimkereiheistern@freenet.de</p>
 </section>
 
 
