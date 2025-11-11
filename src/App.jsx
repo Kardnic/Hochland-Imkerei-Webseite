@@ -10,7 +10,7 @@ import GalerieHonig from "./pages/GalerieHonig";
 import Impressum from "./pages/Impressum";
 import Fortbildungen from "./pages/Fortbildungen";
 import Formulare from "./pages/Formulare";
-import Wachs from "./pages/WissenWachs";
+import WissenWachs from "./pages/WissenWachs";
 
 function App() {
   return (
@@ -27,7 +27,7 @@ function App() {
         <Route path="/impressum" element={<Impressum />} />
         <Route path="/fortbildungen" element={<Fortbildungen />} />
         <Route path="/formulare" element={<Formulare />} />
-        <Route path="/wissen_Wachs" element={<WissenWachs />} />
+        <Route path="/wissen_Wachs" element={<WissenWachs/>} />
       </Routes>
     </Router>
   );
