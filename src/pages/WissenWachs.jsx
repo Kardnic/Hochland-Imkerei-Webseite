@@ -23,7 +23,10 @@ export default function WissenWachs() {
             <p>
             Über einen Hahn, der sich ca. 5cm oberhalb des Bodens befindet, wird dann das Wachs in kleine viereckige Silikonformen gefüllt, die nach der Abkühlung einen kleinen Wachsballen von ca. 1kg ergeben.
             </p>
-            <img src="/Bilder/Wachs1.jpg" alt="Wachsblöcke" />
+            <p>
+            <img src="/Bilder/Wachs1.jpg" alt="Wachs Block" />
+            </p>
+            
         </section>
         <section>
             <p>So bearbeitetes Bienenwachs kann nun zur Herstellung von neuen Mittelwänden (Wachsplatten mit vorgegebener Wabenprägung) verwendet werden.
@@ -48,15 +51,24 @@ export default function WissenWachs() {
             <p>
             Die Mittelwandpresse wird nun für ca. einer Minute geschlossen, damit das Wachs soweit erkaltet, dass die Gießform wieder geöffnet werden kann.
             </p>
+            <p>
             <img src="/Bilder/Wachs5.jpg" alt="Wachs in Presse" />
+            </p>
+            
             <p>
             Nun wird die Wachsplatte herausgenommen und mittels einer Schablone in das benötigte Maß geschnitten.   
             </p>
+            <p>
             <img src="/Bilder/Wachs6.jpg" alt="Wachs geschnitten" />
+            </p>
+            
             <p>
             So entstehen Stück für Stück neue Mittelwände, aus dem Wachs unserer eigenen Bienen.   
             </p>
-            <img src="/Bilder/Wachs7.jpg" alt="Wachs fertig" />
+            <p>
+            <img src="/Bilder/Wachs7.jpg" alt="Wachs Mittelwände" />
+            </p>
+            
         </section>
       </div>
     </HauptLayout>
