@@ -490,3 +490,8 @@ body.menu-open {
   cursor: pointer;
   font-weight: bold;
 }
+p img {
+  cursor: pointer;
+  align-items: center;
+  height: auto;
+}
