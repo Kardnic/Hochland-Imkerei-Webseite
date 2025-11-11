@@ -20,7 +20,7 @@ export default function Angebot() {
       name: "Heidehonig im 500g Glas",
       bild: "/Bilder/Honigsorten/waldhonig.jpg",
       beschreibung:
-        "Dunkler, kräftiger Honig mit harziger Süße – gesammelt in den umliegenden Wäldern.",
+        "Den Heidehonig tragen die Bienen aus der Blüte der Heide „Calluna vulgaris“ ein. Die Farbe (nicht kristallisiert) ist rötlich-braun. Charakteristisch ist seine geleeartige Beschaffenheit.",
     },
     {
       name: "Cremiger Honig im 500g Glas",
