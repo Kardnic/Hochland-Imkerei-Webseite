@@ -115,11 +115,13 @@ export default function HauptLayout({ children, hideRight = false, rightContent 
                       loading="lazy"
                     ></iframe>
                   </div>
-
+                  <a href="/neuigkeiten">
                   <div className="kachel">
                     <h3>Neuigkeiten</h3>
-                    <p>Hier stehen bald aktuelle Einträge 🐝</p>
+                    <h5>Honigprämierung 2025</h5>
+                    <p><img src="/Bilder/Honigprämierung2025.jpg" alt="" /></p>
                   </div>
+                  </a>
 
                   <div className="kachel">
                     <h3>Kontakt</h3>
