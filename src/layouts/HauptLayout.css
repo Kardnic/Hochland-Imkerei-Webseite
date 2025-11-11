@@ -493,5 +493,5 @@ body.menu-open {
 p img {
   cursor: pointer;
   align-items: center;
-  height: auto;
+  height: 100vh;
 }
