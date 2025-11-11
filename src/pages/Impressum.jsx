@@ -11,7 +11,7 @@ export default function Impressumg() {
          
 <section>
 <p>Angaben gemäß § 5 DDG</p>
-<p><Anschrift:h3></Anschrift:h3></p>
+<h3>Anschrift</h3>
 <p>Hochland Imkerei Heistern</p>
 <p>Weisweilerstraße 5</p>
 <p>52379 Langerwehe</p>
