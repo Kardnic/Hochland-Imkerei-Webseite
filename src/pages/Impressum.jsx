@@ -8,9 +8,8 @@ export default function Impressumg() {
       <div className="wissen-container">
         <h1>Impressum</h1>
         <p className="einleitung">
-         
+    <p>Angaben gemäß § 5 DDG</p>     
 <section>
-<p>Angaben gemäß § 5 DDG</p>
 <h3>Anschrift</h3>
 <p>Hochland Imkerei Heistern</p>
 <p>Weisweilerstraße 5</p>
