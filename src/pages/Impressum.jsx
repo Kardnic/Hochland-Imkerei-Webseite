@@ -8,17 +8,23 @@ export default function Impressumg() {
       <div className="wissen-container">
         <h1>Impressum</h1>
         <p className="einleitung">
-         Impressum
+         
 
-Angaben gemäß § 5 DDG
+<p>Angaben gemäß § 5 DDG</p>
+<p>Anschrift:</p>
+<p>Hochland Imkerei Heistern</p>
+<p>Weisweilerstraße 5</p>
+<p>52379 Langerwehe</p>
+<p> </p>
+<p>Vertreten durch:</p>
+<p>Jürgen Liedtke</p>
 
-Anschrift:
-Hochland Imkerei Heistern
-Weisweilerstraße 5
-52379 Langerwehe
 
-Vertreten durch:
-Jürgen Liedtke
+
+
+
+
+
 
 Kontakt:
 Telefon: 02423-6323
