@@ -31,23 +31,23 @@ export default function WissenWachs() {
             <p>
             Diese Wachsblöcke werden nun wieder eingeschmolzen, so dass das flüssige Wachs in eine Mittelwandpresse eingefüllt werden kann.
             </p>
-            <img src="/Bilder/Wachs2.jpg" alt="Wachs flüssig" />
-            <img src="/Bilder/Wachs3.jpg" alt="Wachs Form" />
-            <img src="/Bilder/Wachs4.jpg" alt="Wachs Rohform" />
+            <img src="/Bilder/Wachs2.jpg" alt="Wachs flüssig"  width="50%"/>
+            <img src="/Bilder/Wachs3.jpg" alt="Wachs Form" width="50%"/>
+            <img src="/Bilder/Wachs4.jpg" alt="Wachs Rohform" width="50%"/>
         </section>
         <section>
             <p>
             Die Mittelwandpresse wird nun für ca. einer Minute geschlossen, damit das Wachs soweit erkaltet, dass die Gießform wieder geöffnet werden kann.
             </p>
-            <img src="/Bilder/Wachs5.jpg" alt="Wachs in Presse" />
+            <img src="/Bilder/Wachs5.jpg" alt="Wachs in Presse" width="50%"/>
             <p>
             Nun wird die Wachsplatte herausgenommen und mittels einer Schablone in das benötigte Maß geschnitten.   
             </p>
-            <img src="/Bilder/Wachs6.jpg" alt="Wachs geschnitten" />
+            <img src="/Bilder/Wachs6.jpg" alt="Wachs geschnitten" width="50%"/>
             <p>
             So entstehen Stück für Stück neue Mittelwände, aus dem Wachs unserer eigenen Bienen.   
             </p>
-            <img src="/Bilder/Wachs7.jpg" alt="Wachs fertig" />
+            <img src="/Bilder/Wachs7.jpg" alt="Wachs fertig" width="50%"/>
         </section>
       </div>
     </HauptLayout>
