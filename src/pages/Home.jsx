@@ -32,7 +32,9 @@ export default function Home() {
         Etikett ablösen, spülen, abtrocknen und bei uns wieder abgeben.
       </p>
       <p>
-      <img src="/Bilder/Honigprämierung2025.jpg" alt="Urkunde Honigprämierung 2025" height="150px" onClick={() => setFullscreenSrc("/Bilder/Honigprämierung2025.jpg")}/>
+      <img src="/Bilder/Honigprämierung2025.jpg" alt="Urkunde Honigprämierung 2025" onClick={() => setFullscreenSrc("/Bilder/Honigprämierung2025.jpg")}/>
+      </p>
+      <p>
       Wir haben mit dem Frühtrachthonig an einer Honigprämierung teilgenommen.
       Eine Honigprämierung ist eine jährliche Verleihung von Auszeichnungen für Honig, bei der Honigproben von Imkern nach festgelegten Qualitätskriterien bewertet werden.
       Kriterien wie Sauberkeit, Geschmack, Geruch, Wassergehalt und Invertaseaktivität werden auf einer Skala von 0 bis 5 bewertet. 
