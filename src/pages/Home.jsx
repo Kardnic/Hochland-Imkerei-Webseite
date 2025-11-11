@@ -31,7 +31,7 @@ export default function Home() {
         Dazu einfach das leere Imker-Honigglas in lauwarmes Wasser legen,
         Etikett ablösen, spülen, abtrocknen und bei uns wieder abgeben.
       </p>
-      <p>
+      <p className="gallery-item">
       <img src="/Bilder/Honigprämierung2025.jpg" alt="Urkunde Honigprämierung 2025" onClick={() => setFullscreenSrc("/Bilder/Honigprämierung2025.jpg")}/>
       </p>
       <p>
