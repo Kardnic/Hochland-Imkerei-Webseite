@@ -38,3 +38,27 @@
 .wissen-block li {
   margin-bottom: 0.5rem;
 }
+.galerie-container {
+  text-align: center;
+  padding: 20px;
+}
+
+.galerie-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.galerie-bild {
+  
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.galerie-bild:hover {
+  transform: scale(1.05);
+}
