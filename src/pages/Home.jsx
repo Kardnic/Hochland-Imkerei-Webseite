@@ -32,7 +32,7 @@ export default function Home() {
         Etikett ablösen, spülen, abtrocknen und bei uns wieder abgeben.
       </p>
       <p>
-      <img src="/Bilder/Honigprämierung2025.jpg" alt="Urkunde Honigprämierung 2025" onClick={() => setFullscreenSrc("/Bilder/Honigprämierung2025.jpg")}/>
+      <img src="/Bilder/Honigprämierung2025.jpg" alt="Urkunde Honigprämierung 2025" height="5vh" onClick={() => setFullscreenSrc("/Bilder/Honigprämierung2025.jpg")}/>
       </p>
       <p>
       Wir haben mit dem Frühtrachthonig an einer Honigprämierung teilgenommen.
