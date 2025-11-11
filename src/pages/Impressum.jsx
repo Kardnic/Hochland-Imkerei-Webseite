@@ -16,7 +16,8 @@ export default function Impressumg() {
 <p>52379 Langerwehe</p>
 <p> </p>
 <p>Vertreten durch:</p>
-<p>Jürgen Liedtke</p>
+<p><strong>Jürgen Liedtke</strong></p>
+<p>Steuernummer: 207/5142/1187</p>
 </section>
 <section>
   <h3>Kontakt</h3>
@@ -26,15 +27,6 @@ export default function Impressumg() {
 
 
 
-
-
-
-
-Kontakt:
-Telefon: 02423-6323
-E-Mail: hochlandimkereiheistern@freenet.de
-
-Steuernummer: 207/5142/1187
 
 Inhaltlich Verantwortlicher gemäß § 18 Abs. 2 MStV: Jürgen Liedtke
 
