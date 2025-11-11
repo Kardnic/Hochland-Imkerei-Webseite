@@ -31,9 +31,18 @@ export default function WissenWachs() {
             <p>
             Diese Wachsblöcke werden nun wieder eingeschmolzen, so dass das flüssige Wachs in eine Mittelwandpresse eingefüllt werden kann.
             </p>
+            <p>
             <img src="/Bilder/Wachs2.jpg" alt="Wachs flüssig"  width="50%"/>
+            </p>
+            <p>
             <img src="/Bilder/Wachs3.jpg" alt="Wachs Form" width="50%"/>
+            </p>
+            <p>
             <img src="/Bilder/Wachs4.jpg" alt="Wachs Rohform" width="50%"/>
+            </p>
+            
+            
+            
         </section>
         <section>
             <p>
