@@ -38,6 +38,7 @@ export default function HauptLayout({ children, hideRight = false, rightContent 
           <ul className="dropdown">
             <li><a href="/wissen_Bienen">Bienen</a></li>
             <li><a href="/wissen_Honig">Honig</a></li>
+            <li><a href="/wissen_Wachs">Wachs</a></li>
           </ul>
         </details>
         <details className="gallery">
