@@ -23,7 +23,7 @@ export default function WissenWachs() {
             <p>
             Über einen Hahn, der sich ca. 5cm oberhalb des Bodens befindet, wird dann das Wachs in kleine viereckige Silikonformen gefüllt, die nach der Abkühlung einen kleinen Wachsballen von ca. 1kg ergeben.
             </p>
-            <img src="/public/Bilder/Wachs1.jpg" alt="Wachsblöcke" />
+            <img src="/Bilder/Wachs1.jpg" alt="Wachsblöcke" />
         </section>
         
       </div>
