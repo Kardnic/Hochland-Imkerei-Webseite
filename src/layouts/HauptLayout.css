@@ -500,3 +500,11 @@ p img {
   text-align: center;
   align-items: center;
 }
+.galerie-bild {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
