@@ -9,7 +9,7 @@ export default function Impressumg() {
         <h1>Impressum</h1>
         <p className="einleitung">
          
-
+<section>
 <p>Angaben gemäß § 5 DDG</p>
 <p>Anschrift:</p>
 <p>Hochland Imkerei Heistern</p>
@@ -18,7 +18,7 @@ export default function Impressumg() {
 <p> </p>
 <p>Vertreten durch:</p>
 <p>Jürgen Liedtke</p>
-
+</section>
 
 
 
