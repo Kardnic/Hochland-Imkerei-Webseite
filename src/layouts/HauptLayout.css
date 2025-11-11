@@ -494,7 +494,7 @@ p img {
   cursor: pointer;
   align-items: center;
   height: 50vh;
-  width:20%;
+  
   box-shadow: #333 3px 3px 3px 3px;
 }
 .gallery-item {
