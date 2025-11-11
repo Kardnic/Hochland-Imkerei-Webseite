@@ -43,7 +43,7 @@ export default function Kontakt() {
         <p>
           Du möchtest uns eine Nachricht schicken? Nutze das Formular oder schreib
           direkt an{" "}
-          <a href="mailto:contact@hochland-imkerei-heistern.de">
+          <a href="mailto:hochlandimkereiheistern@freenet.de">
             Hochland Imkerei Heistern
           </a>.
         </p>
