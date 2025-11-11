@@ -2,7 +2,7 @@ import React from "react";
 import HauptLayout from "../layouts/HauptLayout";
 import "../layouts/WissenHonig.css";
 
-export default function WissenHonig() {
+export default function WissenWachs() {
   return (
     <HauptLayout>
       <div className="wissen-container">
