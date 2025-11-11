@@ -493,8 +493,7 @@ body.menu-open {
 p img {
   cursor: pointer;
   align-items: center;
-  height: 50vh;
-  
+  max-height: 50vh;
   box-shadow: #333 3px 3px 3px 3px;
 }
 .gallery-item {

@@ -23,7 +23,7 @@ export default function WissenWachs() {
             <p>
             Über einen Hahn, der sich ca. 5cm oberhalb des Bodens befindet, wird dann das Wachs in kleine viereckige Silikonformen gefüllt, die nach der Abkühlung einen kleinen Wachsballen von ca. 1kg ergeben.
             </p>
-            <img src="/Bilder/Wachs1.jpg" alt="Wachsblöcke" className="galerie-bild"/>
+            <img src="/Bilder/Wachs1.jpg" alt="Wachsblöcke" />
         </section>
         <section>
             <p>So bearbeitetes Bienenwachs kann nun zur Herstellung von neuen Mittelwänden (Wachsplatten mit vorgegebener Wabenprägung) verwendet werden.
@@ -32,13 +32,13 @@ export default function WissenWachs() {
             Diese Wachsblöcke werden nun wieder eingeschmolzen, so dass das flüssige Wachs in eine Mittelwandpresse eingefüllt werden kann.
             </p>
             <p>
-            <img src="/Bilder/Wachs2.jpg" alt="Wachs flüssig"  width="50%" className="galerie-bild"/>
+            <img src="/Bilder/Wachs2.jpg" alt="Wachs flüssig"  />
             </p>
             <p>
-            <img src="/Bilder/Wachs3.jpg" alt="Wachs Form" width="50%" className="galerie-bild"/>
+            <img src="/Bilder/Wachs3.jpg" alt="Wachs Form" />
             </p>
             <p>
-            <img src="/Bilder/Wachs4.jpg" alt="Wachs Rohform" width="50%" className="galerie-bild"/>
+            <img src="/Bilder/Wachs4.jpg" alt="Wachs Rohform" />
             </p>
             
             
@@ -48,15 +48,15 @@ export default function WissenWachs() {
             <p>
             Die Mittelwandpresse wird nun für ca. einer Minute geschlossen, damit das Wachs soweit erkaltet, dass die Gießform wieder geöffnet werden kann.
             </p>
-            <img src="/Bilder/Wachs5.jpg" alt="Wachs in Presse" width="50%" className="galerie-bild"/>
+            <img src="/Bilder/Wachs5.jpg" alt="Wachs in Presse" />
             <p>
             Nun wird die Wachsplatte herausgenommen und mittels einer Schablone in das benötigte Maß geschnitten.   
             </p>
-            <img src="/Bilder/Wachs6.jpg" alt="Wachs geschnitten" width="50%" className="galerie-bild"/>
+            <img src="/Bilder/Wachs6.jpg" alt="Wachs geschnitten" />
             <p>
             So entstehen Stück für Stück neue Mittelwände, aus dem Wachs unserer eigenen Bienen.   
             </p>
-            <img src="/Bilder/Wachs7.jpg" alt="Wachs fertig" width="50%" className="galerie-bild"/>
+            <img src="/Bilder/Wachs7.jpg" alt="Wachs fertig" />
         </section>
       </div>
     </HauptLayout>
