@@ -41,16 +41,7 @@ Der Nutzung von im Rahmen der Impressumspflicht veröffentlichten Kontaktdaten d
 </section>
 
 </p>
-
-
-
-
-
-
-
-
-
-      </div>
+</div>
     </HauptLayout>
   );
 }

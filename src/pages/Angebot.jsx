@@ -17,7 +17,7 @@ export default function Angebot() {
         "Aromatischer Blütenhonig mit leicht würziger Note – die Vielfalt des Sommers im Glas.",
     },
     {
-      name: "Heidehonig im 500g Glas",
+      name: "Heidehonig im 250g Glas",
       bild: "/Bilder/Honigsorten/waldhonig.jpg",
       beschreibung:
         "Den Heidehonig tragen die Bienen aus der Blüte der Heide „Calluna vulgaris“ ein. Die Farbe (nicht kristallisiert) ist rötlich-braun. Charakteristisch ist seine geleeartige Beschaffenheit.",
