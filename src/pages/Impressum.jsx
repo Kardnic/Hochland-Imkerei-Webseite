@@ -2,11 +2,11 @@ import React from "react";
 import HauptLayout from "../layouts/HauptLayout";
 import "../layouts/Impressum.css"; // <-- NEUE CSS-Datei
 
-export default function WissenBienen() {
+export default function Impressumg() {
   return (
     <HauptLayout>
       <div className="wissen-container">
-        <h1>Wissenswertes über Bienen</h1>
+        <h1>Impressum</h1>
         <p className="einleitung">
          Impressum
 
