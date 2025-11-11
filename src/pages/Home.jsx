@@ -29,6 +29,14 @@ export default function Home() {
         Dazu einfach das leere Imker-Honigglas in lauwarmes Wasser legen,
         Etikett ablösen, spülen, abtrocknen und bei uns wieder abgeben.
       </p>
+      <p>
+      <img src="/Bilder/Honigprämierung2025.jpg" alt="Urkunde Honigprämierung 2025" height="50%"/>
+      Wir haben mit dem Frühtrachthonig an einer Honigprämierung teilgenommen.
+      Eine Honigprämierung ist eine jährliche Verleihung von Auszeichnungen für Honig, bei der Honigproben von Imkern nach festgelegten Qualitätskriterien bewertet werden.
+      Kriterien wie Sauberkeit, Geschmack, Geruch, Wassergehalt und Invertaseaktivität werden auf einer Skala von 0 bis 5 bewertet. 
+      Mit den Werten von 17,1% Wassergehalt, der elektrischen Leitfähigkeit von 0,20, dem Invertasewert von 169,1 U/kg und einem HMF von 1,9 g/kg wurde unser Frühtrachthonig am 09.11.2025 mit der <strong><u>Leistungsmedaille in Silber </u></strong>ausgezeichnet.
+
+      </p>
     </HauptLayout>
   );
 }
