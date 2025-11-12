@@ -119,7 +119,11 @@ export default function HauptLayout({ children, hideRight = false, rightContent 
                   <div className="kachel">
                     <h3>Neuigkeiten</h3>
                     <h5>Honigprämierung 2025</h5>
-                    <p><img src="/Bilder/Honigprämierung2025.jpg" alt="" height="10%"/></p>
+                    <p><img src="/Bilder/Honigprämierung2025.jpg" alt="Honigprämierung" height="10%"/></p>
+                    <h5>Wir sind dabei!</h5>
+                    <p>
+                      <img src="/Bilder/Weihnachtsmarkt.jpg" alt="Weihnachtsmarkt" />
+                    </p>
                   </div>
                   </a>
 
