@@ -23,7 +23,7 @@ export default function Neuigkeiten() {
         Wir freuen uns, euch mitteilen zu können, dass wir am diesjährigen Weihnachtsmarkt in Heistern teilnehmen werden! Besucht uns an unserem Stand, um unsere köstlichen Honigprodukte zu entdecken und mehr über die faszinierende Welt der Imkerei zu erfahren.
       </p>
       <p>
-      <img src="/Bilder/Weihnachtsmarkt.jpg" alt="Weihnachtsmarkt Heistern" onClick={() => setFullscreenSrc("/Bilder/Weihnachtsmarkt.jpg")}/>
+      <img src="/Bilder/Weihnachtsmarkt.jpg" alt="Weihnachtsmarkt Heistern" onClick={() => setFullscreenSrc("/Bilder/Weihnachtsmarkt.jpeg")}/>
       </p>
       {fullscreenSrc && (
           <div className="fullscreen-overlay" onClick={() => setFullscreenSrc(null)}>
