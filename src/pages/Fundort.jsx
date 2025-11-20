@@ -6,7 +6,7 @@ export default function Fundort() {
   const produkte = [
     {
       name: "Fleischerei BOSHOF",
-      bild: "/Bilder/Honigsorten/fruehtracht.jpg",
+      bild: "/Bilder/boshof.JPG",
       beschreibung:
         "Grabenstraße 45 52249 Eschweiler",
     },
@@ -33,7 +33,7 @@ export default function Fundort() {
   return (
     <HauptLayout>
       <div className="angebot-container">
-        <h1>Unser Angebot 🍯</h1>
+        <h1>Wo gibt es unseren Honig?</h1>
         <p className="angebot-einleitung">
           Unsere Honige stammen aus naturnaher Bienenhaltung rund um Heistern.
           Jeder Honig ist ein reines Naturprodukt – ohne Zusätze, schonend geerntet
