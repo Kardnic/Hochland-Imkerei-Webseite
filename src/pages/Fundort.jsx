@@ -11,10 +11,10 @@ export default function Fundort() {
         "Grabenstraße 45 52249 Eschweiler",
     },
     {
-      name: "Sommertracht Honig im 500g Glas",
-      bild: "/Bilder/Honigsorten/sommertracht.jpg",
+      name: "Bäckerei Stolz",
+      bild: "/Bilder/stolz.jpg",
       beschreibung:
-        "Aromatischer Blütenhonig mit leicht würziger Note – die Vielfalt des Sommers im Glas.",
+        "Birkesdorfer Straße 25 52353 Düren Tel.: 02421 81441 https://www.baeckereistolz.de",
     },
     {
       name: "Heidehonig im 250g Glas",
