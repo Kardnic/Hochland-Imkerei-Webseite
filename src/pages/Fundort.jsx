@@ -20,7 +20,7 @@ export default function Fundort() {
     },
     {
       name: "Ristorante l`Angelo da Massimo",
-      bild: "/Bilder/Honigsorten/pizzeria.jpg",
+      bild: "/Bilder/pizzeria.jpg",
       beschreibung:
         "Schillingstraße 98 52355 Düren Gürzenich Tel.: 02421 961131 ",
       webseite: "https://www.ristoranteangelo.de/",
