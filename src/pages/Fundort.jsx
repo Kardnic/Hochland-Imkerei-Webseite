@@ -17,7 +17,7 @@ export default function Fundort() {
       bild: "/Bilder/stolz.jpg",
       beschreibung:
         "Birkesdorfer Straße 25 52353 Düren Tel.: 02421 81441 ",
-      webseite: "https://www.baeckereistolz.de/",
+      webseite: "https://www.bäckereistolz.de/",
     },
     {
       name: "Ristorante l`Angelo da Massimo",
