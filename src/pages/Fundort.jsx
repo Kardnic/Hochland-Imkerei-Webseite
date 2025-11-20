@@ -1,6 +1,7 @@
 import React from "react";
 import HauptLayout from "../layouts/HauptLayout";
 import "../layouts/Angebot.css";
+import "../layouts/Fundort.css";
 
 export default function Fundort() {
   const produkte = [
