@@ -48,7 +48,13 @@ export default function HauptLayout({ children, hideRight = false, rightContent 
             <li><a href="/galerie_Honig">Honig</a></li>
           </ul>
         </details>
-        <a href="/angebot">Angebot</a>
+        <details>
+        <summary>Angebot</summary>
+            <ul>
+                <li><a href="/angebot">Angebot</a></li>
+                <li><a href="/fundort">Wo gibts unseren Honig?</a></li>
+            </ul>
+          </details>
         <a href="/contact">Kontakt</a>
       </nav>
 
@@ -75,12 +81,13 @@ export default function HauptLayout({ children, hideRight = false, rightContent 
                 <li><a href="/galerie_Honig">Honig</a></li>
               </ul>
             </details>
+            <details>
             <summary>Angebot</summary>
             <ul>
                 <li><a href="/angebot">Angebot</a></li>
                 <li><a href="/fundort">Wo gibts unseren Honig?</a></li>
             </ul>
-              
+            </details>
             
             
             <a href="/contact">Kontakt</a>
