@@ -39,7 +39,7 @@ export default function Fundort() {
 
         <div className="angebot-grid">
           {produkte.map((produkt, index) => (
-             <a href={produkt.webseite}>
+             <a href={produkt.webseite} target="_blank" rel="noopener noreferrer">
             <div className="produkt-kachel" key={index}>
               <img
                 src={produkt.bild}
