@@ -5,10 +5,10 @@ import "../layouts/Angebot.css";
 export default function Fundort() {
   const produkte = [
     {
-      name: "Frühtracht Honig im 500g Glas",
+      name: "Fleischerei BOSHOF",
       bild: "/Bilder/Honigsorten/fruehtracht.jpg",
       beschreibung:
-        "Ein milder, cremiger Honig mit feiner Süße – geerntet im Frühjahr aus Obstblüten und Raps.",
+        "Grabenstraße 45 52249 Eschweiler",
     },
     {
       name: "Sommertracht Honig im 500g Glas",
