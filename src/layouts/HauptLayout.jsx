@@ -50,7 +50,7 @@ export default function HauptLayout({ children, hideRight = false, rightContent 
         </details>
         <details>
         <summary>Angebot</summary>
-            <ul>
+            <ul className="dropdown">
                 <li><a href="/angebot">Angebot</a></li>
                 <li><a href="/fundort">Wo gibts unseren Honig?</a></li>
             </ul>
