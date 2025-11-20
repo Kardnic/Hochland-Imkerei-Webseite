@@ -8,7 +8,7 @@ export default function Fundort() {
       name: "Fleischerei BOSHOF",
       bild: "/Bilder/boshof.JPG",
       beschreibung:
-        "Grabenstraße 45 52249 Eschweiler",
+        "Grabenstraße 45 52249 Eschweiler Tel.: 02403 22835 ",
       webseite: "https://fleischerei-boshof.de/",
     },
     {
@@ -38,6 +38,7 @@ export default function Fundort() {
 
         <div className="angebot-grid">
           {produkte.map((produkt, index) => (
+             <a href={produkt.webseite}>
             <div className="produkt-kachel" key={index}>
               <img
                 src={produkt.bild}
@@ -46,8 +47,9 @@ export default function Fundort() {
               />
               <h3>{produkt.name}</h3>
               <p>{produkt.beschreibung}</p>
-              <p><a href={produkt.webseite}></a></p>
+             
             </div>
+            </a>
           ))}
         </div>
 
