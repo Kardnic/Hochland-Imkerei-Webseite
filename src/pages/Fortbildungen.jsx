@@ -227,6 +227,39 @@ export default function Fortbildungen() {
         </>
       ),
     },
+    {
+      titel: "Honigsommelier",
+      inhalt: (
+        <>
+          <h2>Honigsommelière</h2>
+          <div className="zertifikat-container">
+            <img
+              src="/Bilder/Honigsomelier Jürgen.jpg"
+              alt="Zertifikat Wespenberater Jutta"
+              className="zertifikat1"
+              onClick={(e) => openFullscreen(e.target.src)}
+            />
+            <img
+              src="/Bilder/Honigsomelier Jutta.jpg"
+              alt="Zertifikat Wespenberater Jürgen"
+              className="zertifikat2"
+              onClick={(e) => openFullscreen(e.target.src)}
+            />
+          </div>
+          <p>
+            <p>
+              Wir haben als eine der ersten Teilnehmer den neu eingeführten Lehrgang zum Honig Sommelier im deutschsprachigen Raum erfolgreich absolviert. 
+            </p>
+            <p>
+              Der Imkerverband Rheinland hat im Januar 2025 zum ersten Mal einen Lehrgang für den Honig-Sommelier im Bienenmuseum in Duisburg angeboten.
+            </p>
+            <p>
+              Über vier Tage hinweg erhielten wir umfassende Einblicke in die Entstehung, Gewinnung und Bedeutung des Honigs für den Menschen. Neben sensorischen Techniken zur Differenzierung von Aromen und Texturen lernten wir auch die vielfältigen Einflussfaktoren auf die Honigqualität kennen, darunter Trachtpflanzen, Herkunftsregionen und Herstellungsprozesse.
+            </p>
+          </p>
+        </>
+      ),
+    },
   ];
 
  return (
