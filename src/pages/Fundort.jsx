@@ -9,25 +9,23 @@ export default function Fundort() {
       bild: "/Bilder/boshof.JPG",
       beschreibung:
         "Grabenstraße 45 52249 Eschweiler",
+      webseite: "https://fleischerei-boshof.de/",
     },
     {
       name: "Bäckerei Stolz",
       bild: "/Bilder/stolz.jpg",
       beschreibung:
-        "Birkesdorfer Straße 25 52353 Düren Tel.: 02421 81441 https://www.baeckereistolz.de",
+        "Birkesdorfer Straße 25 52353 Düren Tel.: 02421 81441 ",
+      webseite: "https://www.baeckereistolz.de/",
     },
     {
-      name: "Heidehonig im 250g Glas",
-      bild: "/Bilder/Honigsorten/waldhonig.jpg",
+      name: "Ristorante l`Angelo da Massimo",
+      bild: "/Bilder/Honigsorten/pizzeria.jpg",
       beschreibung:
-        "Den Heidehonig tragen die Bienen aus der Blüte der Heide „Calluna vulgaris“ ein. Die Farbe (nicht kristallisiert) ist rötlich-braun. Charakteristisch ist seine geleeartige Beschaffenheit.",
+        "Schillingstraße 98 52355 Düren Gürzenich Tel.: 02421 961131 ",
+      webseite: "https://www.ristoranteangelo.de/",
     },
-    {
-      name: "Cremiger Honig im 500g Glas",
-      bild: "/Bilder/Honigsorten/cremehonig.jpg",
-      beschreibung:
-        "Schonend gerührter Honig mit zart-cremiger Konsistenz – ideal zum Streichen.",
-    },
+    
   ];
 
   return (
@@ -35,9 +33,7 @@ export default function Fundort() {
       <div className="angebot-container">
         <h1>Wo gibt es unseren Honig?</h1>
         <p className="angebot-einleitung">
-          Unsere Honige stammen aus naturnaher Bienenhaltung rund um Heistern.
-          Jeder Honig ist ein reines Naturprodukt – ohne Zusätze, schonend geerntet
-          und mit viel Liebe abgefüllt.
+          Ihr wollt wissen, wo ihr unseren leckeren Honig kaufen könnt? Hier sind einige unserer Verkaufsstellen:
         </p>
 
         <div className="angebot-grid">
@@ -50,6 +46,7 @@ export default function Fundort() {
               />
               <h3>{produkt.name}</h3>
               <p>{produkt.beschreibung}</p>
+              <p><a href={produkt.webseite}></a></p>
             </div>
           ))}
         </div>
