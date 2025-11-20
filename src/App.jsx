@@ -11,7 +11,8 @@ import Impressum from "./pages/Impressum";
 import Fortbildungen from "./pages/Fortbildungen";
 import Formulare from "./pages/Formulare";
 import WissenWachs from "./pages/WissenWachs";
-import Neuigkeiten from "./pages/Neuigkeiten";
+import Neuigkeiten from "./pages/Neuigkeiten";  
+import Fundort from "./pages/Fundort";
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
         <Route path="/formulare" element={<Formulare />} />
         <Route path="/wissen_Wachs" element={<WissenWachs/>} />
         <Route path="/neuigkeiten" element={<Neuigkeiten/>} />
+        <Route path="/fundort" element={<Fundort/>} />
       </Routes>
     </Router>
   );
