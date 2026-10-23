@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import Home from "./pages/Home";
 import UeberUns from "./pages/UeberUns";
@@ -17,7 +18,7 @@ import Fundort from "./pages/Fundort";
 
 const SEO = () => {
   const { pathname } = useLocation();
-  React.useEffect(() => {
+  useEffect(() => {
     const pages = {
       "/": ["Hochland Imkerei Heistern | Regionaler Honig", "Regionaler Honig, Bienenvölker und Einblicke in unsere Imkerei in Heistern."],
       "/ueberUns": ["Über uns | Hochland Imkerei Heistern", "Erfahren Sie mehr über unsere Hobby-Imkerei und unsere Bienenvölker."],
