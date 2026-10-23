@@ -129,14 +129,10 @@ export default function HauptLayout({ children, hideRight = false, rightContent 
 
                   <div className="kachel">
                     <h3>Hier findet ihr uns</h3>
-                    <iframe
-                      title="Standort der Hochland Imkerei Heistern"
-                      referrerPolicy="no-referrer-when-downgrade"
-                      src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1824.430246073691!2d6.335650860631513!3d50.79729099699213!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47bf67854d3c09b7%3A0x267a91532920b990!2sHochland%20Imkerei%20Heistern!5e1!3m2!1sde!2sde!4v1739555853620!5m2!1sde!2sde"
-                      className="google-map"
-                      allowFullScreen
-                      loading="lazy"
-                    ></iframe>
+                    <div className="google-map map-placeholder">
+                      <p>Standort der Hochland Imkerei Heistern</p>
+                      <a href="https://www.google.com/maps/search/?api=1&query=Hochland%20Imkerei%20Heistern" target="_blank" rel="noopener noreferrer">Standort in Google Maps öffnen</a>
+                    </div>
                   </div>
                   <a href="/neuigkeiten">
                   <div className="kachel">
