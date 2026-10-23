@@ -549,3 +549,45 @@ p img {
     overflow-wrap: anywhere;
   }
 }
+
+/* Mobile navigation: keep menu inside viewport and separate open/close controls. */
+@media (max-width: 900px) {
+  .side-menu.open {
+    box-sizing: border-box;
+    width: min(85vw, 320px);
+    max-width: 100vw;
+    right: 0;
+    padding: 64px 20px 24px;
+    overflow-x: hidden;
+  }
+  .side-menu .close-button {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    margin: 0;
+    padding: 0;
+    width: 44px;
+    height: 44px;
+    line-height: 1;
+    z-index: 2;
+  }
+  .menu-button {
+    width: 44px;
+    height: 44px;
+    top: 12px;
+    right: 18px;
+    padding: 9px 6px;
+    box-sizing: border-box;
+  }
+  .menu-button span {
+    left: 6px;
+    width: 32px;
+  }
+  .menu-button[aria-expanded="true"] {
+    visibility: hidden;
+    pointer-events: none;
+  }
+  .side-menu a, .side-menu summary {
+    overflow-wrap: anywhere;
+  }
+}
