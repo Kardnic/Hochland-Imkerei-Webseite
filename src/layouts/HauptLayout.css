@@ -659,3 +659,11 @@ p img {
     transition: none !important;
   }
 }
+
+/* Responsive media safety and keyboard focus. */
+img, video, iframe { max-width: 100%; }
+.inhalt-links, .seite-rechts { overflow-wrap: anywhere; }
+:focus-visible { outline: 3px solid #d6a333; outline-offset: 3px; }
+@media (prefers-reduced-motion: reduce) {
+  .side-menu, .menu-overlay, .menu-button span { transition-duration: .01ms !important; }
+}
