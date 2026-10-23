@@ -17,7 +17,7 @@ export default function HauptLayout({ children, hideRight = false, rightContent 
         </div>
 
         {/* 🆕 Burger-Menü-Button */}
-        <button className="menu-button" onClick={toggleMenu}>
+        <button className="menu-button" type="button" aria-label="Menü öffnen" aria-expanded={isMenuOpen} onClick={toggleMenu}>
           <span></span>
           <span></span>
           <span></span>
@@ -61,9 +61,9 @@ export default function HauptLayout({ children, hideRight = false, rightContent 
       {/* 🆕 Mobile Navigation */}
       {isMenuOpen && (
         <>
-          <div className="menu-overlay" onClick={toggleMenu}></div>
+          <div className="menu-overlay open" onClick={toggleMenu}></div>
           <nav className="side-menu open">
-            <button className="close-button" onClick={toggleMenu}>×</button>
+            <button className="close-button" type="button" aria-label="Menü schließen" onClick={toggleMenu}>×</button>
             <a href="/">Startseite</a>
             <a href="/ueberUns">Über uns</a>
             <details>
