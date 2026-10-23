@@ -35,7 +35,7 @@ export default function Home() {
       <p className="gallery-item">
       <img src="/Bilder/Honigprämierung2025.jpg" alt="Urkunde Honigprämierung 2025" onClick={() => setFullscreenSrc("/Bilder/Honigprämierung2025.jpg")}/>
       </p>
-      <p>
+      <div>
         <p>Wir haben mit dem Frühtrachthonig an einer Honigprämierung teilgenommen.</p>
         <p>Eine Honigprämierung ist eine jährliche Verleihung von Auszeichnungen für Honig, bei der Honigproben von Imkern nach festgelegten Qualitätskriterien bewertet werden.</p>
         <p>Kriterien wie Sauberkeit, Geschmack, Geruch, Wassergehalt und Invertaseaktivität werden auf einer Skala von 0 bis 5 bewertet.</p>
@@ -43,7 +43,7 @@ export default function Home() {
        
       
 
-      </p>
+      </div>
       {fullscreenSrc && (
           <div className="fullscreen-overlay" onClick={() => setFullscreenSrc(null)}>
             <span className="close-button">&times;</span>
