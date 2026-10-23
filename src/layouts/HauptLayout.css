@@ -591,3 +591,62 @@ p img {
     overflow-wrap: anywhere;
   }
 }
+
+/* Refined mobile drawer: calm spacing, clear hierarchy, original green palette. */
+@media (max-width: 900px) {
+  .side-menu.open {
+    width: min(88vw, 340px);
+    padding: 72px 20px 28px;
+    gap: 5px;
+    background: #228b22;
+    border-radius: 18px 0 0 18px;
+    box-shadow: -12px 0 36px rgba(0,0,0,.25);
+  }
+  .side-menu > a,
+  .side-menu > details > summary {
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 48px;
+    padding: 12px 14px;
+    margin: 0;
+    font-size: 1.05rem;
+    font-weight: 500;
+    line-height: 1.35;
+    text-align: left;
+    border-radius: 10px;
+  }
+  .side-menu > details { width: 100%; }
+  .side-menu > details > summary {
+    cursor: pointer;
+    list-style-position: inside;
+  }
+  .side-menu details ul {
+    list-style: none;
+    margin: 0 0 6px;
+    padding: 4px 0 4px 16px;
+  }
+  .side-menu details li a {
+    display: block;
+    padding: 10px 12px;
+    font-size: .98rem;
+    border-radius: 8px;
+  }
+  .side-menu a:hover, .side-menu summary:hover,
+  .side-menu a:focus-visible, .side-menu summary:focus-visible {
+    background: rgba(255,255,255,.14);
+  }
+  .side-menu .close-button {
+    display: grid;
+    place-items: center;
+    top: 16px;
+    right: 18px;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background: rgba(255,255,255,.12);
+    font-size: 30px;
+  }
+  .menu-overlay.open { background: rgba(0,0,0,.42); }
+}
