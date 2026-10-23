@@ -501,3 +501,51 @@ p img {
   text-align: center;
   align-items: center;
 }
+
+
+/* Mobile layout fixes: prevent overflowing cards and long contact addresses. */
+.rahmen, .inhalt-links, .seite-rechts, .kachel {
+  min-width: 0;
+}
+.seite-rechts .kachel,
+.seite-rechts .kachel p,
+.seite-rechts .kachel a {
+  overflow-wrap: anywhere;
+  word-break: normal;
+}
+.seite-rechts .kachel img,
+.seite-rechts .kachel iframe {
+  max-width: 100%;
+}
+@media (max-width: 900px) {
+  .rahmen {
+    width: calc(100% - 24px);
+    margin: 12px auto;
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .inhalt-links {
+    min-width: 0;
+  }
+  .seite-rechts {
+    width: 100%;
+    box-sizing: border-box;
+    align-items: stretch;
+  }
+  .seite-rechts .kachel {
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .seite-rechts > a {
+    display: block;
+    min-width: 0;
+    text-decoration: none;
+  }
+  .google-map {
+    display: block;
+    width: 100%;
+  }
+  .footer {
+    grid-column: 1 / -1;
+    overflow-wrap: anywhere;
+  }
+}
