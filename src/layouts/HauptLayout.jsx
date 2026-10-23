@@ -1,4 +1,4 @@
-import React, { useState } from "react"; // 🆕 useState hinzugefügt
+import React, { useEffect, useState } from "react"; // 🆕 useState hinzugefügt
 import { useLocation } from "react-router-dom";
 import "./HauptLayout.css";
 
@@ -6,14 +6,21 @@ export default function HauptLayout({ children, hideRight = false, rightContent 
   const location = useLocation();
   const [isMenuOpen, setIsMenuOpen] = useState(false); // 🆕 Zustand fürs Burger-Menü
 
-  const toggleMenu = () => setIsMenuOpen(!isMenuOpen); // 🆕 Menü öffnen/schließen
+  const toggleMenu = () => setIsMenuOpen((open) => !open);
+  useEffect(() => { setIsMenuOpen(false); }, [location.pathname]);
+  useEffect(() => {
+    if (!isMenuOpen) return;
+    const onKeyDown = (event) => { if (event.key === "Escape") setIsMenuOpen(false); };
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
+  }, [isMenuOpen]); // 🆕 Menü öffnen/schließen
 
   return (
     <div className="rahmen">
       {/* Kopfbereich */}
       <header className="kopf">
         <div className="logo">
-          <img src="/Bilder/Biene Neu.jpg" alt="Logo" />
+          <img src="/Bilder/Biene Neu.jpg" alt="Hochland Imkerei Heistern" decoding="async" />
         </div>
 
         {/* 🆕 Burger-Menü-Button */}
@@ -26,11 +33,11 @@ export default function HauptLayout({ children, hideRight = false, rightContent 
 
       {/* Headerbild */}
       <div className="headerbild">
-        <img src="/Bilder/headerBild.jpg" alt="Headerbild" />
+        <img src="/Bilder/headerBild.jpg" alt="Bienen und Imkerei" decoding="async" />
       </div>
 
       {/* Navigation (Desktop) */}
-      <nav className="navigation">
+      <nav className="navigation" aria-label="Hauptnavigation">
         <a href="/">Startseite</a>
         <a href="/ueberUns">Über uns</a>
         <details className="wissenswert">
@@ -62,7 +69,7 @@ export default function HauptLayout({ children, hideRight = false, rightContent 
       {isMenuOpen && (
         <>
           <div className="menu-overlay open" onClick={toggleMenu}></div>
-          <nav className="side-menu open">
+          <nav className="side-menu open" aria-label="Mobile Navigation">
             <button className="close-button" type="button" aria-label="Menü schließen" onClick={toggleMenu}>×</button>
             <a href="/">Startseite</a>
             <a href="/ueberUns">Über uns</a>
@@ -123,6 +130,8 @@ export default function HauptLayout({ children, hideRight = false, rightContent 
                   <div className="kachel">
                     <h3>Hier findet ihr uns</h3>
                     <iframe
+                      title="Standort der Hochland Imkerei Heistern"
+                      referrerPolicy="no-referrer-when-downgrade"
                       src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1824.430246073691!2d6.335650860631513!3d50.79729099699213!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47bf67854d3c09b7%3A0x267a91532920b990!2sHochland%20Imkerei%20Heistern!5e1!3m2!1sde!2sde!4v1739555853620!5m2!1sde!2sde"
                       className="google-map"
                       allowFullScreen
@@ -133,14 +142,14 @@ export default function HauptLayout({ children, hideRight = false, rightContent 
                   <div className="kachel">
                     <h3>Neuigkeiten</h3>
                     <h5>Honigprämierung 2025</h5>
-                    <p><img src="/Bilder/Honigprämierung2025.jpg" alt="Honigprämierung" height="10%"/></p>
+                    <p><img src="/Bilder/Honigprämierung2025.jpg" alt="Urkunde der Honigprämierung 2025" loading="lazy" decoding="async"/></p>
                    
                   </div>
                   </a>
 
                   <div className="kachel">
                     <h3>Kontakt</h3>
-                    <p>hochlandimkereiheistern@freenet.de</p>
+                    <p><a href="mailto:hochlandimkereiheistern@freenet.de">hochlandimkereiheistern@freenet.de</a></p>
                   </div>
                 </>
               )}
