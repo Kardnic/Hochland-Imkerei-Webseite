@@ -15,6 +15,7 @@ export default function Kontakt() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (!formData.name.trim() || !formData.email.trim() || !formData.nachricht.trim()) { setStatus("error"); return; }
     setStatus("loading");
 
     try {
@@ -56,6 +57,7 @@ export default function Kontakt() {
               name="name"
               value={formData.name}
               onChange={handleChange}
+              maxLength={120}
               required
             />
           </label>
@@ -64,6 +66,8 @@ export default function Kontakt() {
             E-Mail:
             <input
               type="email"
+              autoComplete="email"
+              maxLength={254}
               name="email"
               value={formData.email}
               onChange={handleChange}
@@ -76,6 +80,7 @@ export default function Kontakt() {
             <textarea
               name="nachricht"
               rows="5"
+              maxLength={5000}
               value={formData.nachricht}
               onChange={handleChange}
               required
@@ -88,12 +93,12 @@ export default function Kontakt() {
         </form>
 
         {status === "success" && (
-          <p className="erfolgsmeldung">
+          <p className="erfolgsmeldung" role="status">
             ✅ Vielen Dank! Deine Nachricht wurde erfolgreich versendet.
           </p>
         )}
         {status === "error" && (
-          <p className="fehlermeldung">
+          <p className="fehlermeldung" role="alert">
             ❌ Beim Senden ist ein Fehler aufgetreten. Bitte versuche es später erneut.
           </p>
         )}
