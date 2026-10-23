@@ -650,3 +650,12 @@ p img {
   }
   .menu-overlay.open { background: rgba(0,0,0,.42); }
 }
+
+/* Hide the hamburger immediately when the drawer opens, without transition. */
+@media (max-width: 900px) {
+  .menu-button[aria-expanded="true"] {
+    display: none !important;
+    opacity: 0 !important;
+    transition: none !important;
+  }
+}
