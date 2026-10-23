@@ -659,3 +659,15 @@ p img {
     transition: none !important;
   }
 }
+
+/* Responsive media safety and keyboard focus. */
+img, video, iframe { max-width: 100%; }
+.inhalt-links, .seite-rechts { overflow-wrap: anywhere; }
+:focus-visible { outline: 3px solid #d6a333; outline-offset: 3px; }
+@media (prefers-reduced-motion: reduce) {
+  .side-menu, .menu-overlay, .menu-button span { transition-duration: .01ms !important; }
+}
+
+.map-placeholder { box-sizing: border-box; min-height: 200px; height: auto; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 12px; padding: 16px; background: #f4f6f0; text-align: center; }
+.map-placeholder p { margin: 0; }
+.map-placeholder a { color: #206b25; font-weight: 600; }
