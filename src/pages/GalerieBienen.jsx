@@ -12,6 +12,8 @@ export default function GalerieBienen() {
     "/Bilder/Königin III.jpg",
     "/Bilder/Schaukasten I.jpg",
     "/Bilder/Schwarmzelle.jpg",
+    "/Bilder/Wabe mit Stifte.jpg",
+    "/Bilder/Wabe mit Stiften und Made.jpg",
   ];
 
   return (
