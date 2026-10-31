@@ -137,8 +137,8 @@ export default function HauptLayout({ children, hideRight = false, rightContent 
                   <a href="/neuigkeiten">
                   <div className="kachel">
                     <h3>Neuigkeiten</h3>
-                    <h5>Honigprämierung 2025</h5>
-                    <p><img src="/Bilder/Honigprämierung2025.jpg" alt="Urkunde der Honigprämierung 2025" loading="lazy" decoding="async"/></p>
+                    <h5>Honigprämierung 2026</h5>
+                    <p>Wir haben erneut an der Honigprämierung teilgenommen. Die Ergebnisse werden am 15. November 2026 bekannt gegeben.</p>
                    
                   </div>
                   </a>
