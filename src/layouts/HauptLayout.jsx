@@ -137,8 +137,10 @@ export default function HauptLayout({ children, hideRight = false, rightContent 
                   <a href="/neuigkeiten">
                   <div className="kachel">
                     <h3>Neuigkeiten</h3>
-                    <h5>Honigprämierung 2026</h5>
-                    <p>Wir haben erneut an der Honigprämierung teilgenommen. Die Ergebnisse werden am 15. November 2026 bekannt gegeben.</p>
+                    <h5>Bronze bei der Honigprämierung 2026</h5>
+                    <p>Unser Honig wurde bei der diesjährigen Honigprämierung mit Bronze ausgezeichnet.</p>
+                    <h5>Honiguntersuchung 2026</h5>
+                    <p>Der Prüfbericht mit Pollenanalyse vom 14. Oktober 2026 liegt vor. Mehr dazu unter Neuigkeiten.</p>
                    
                   </div>
                   </a>
