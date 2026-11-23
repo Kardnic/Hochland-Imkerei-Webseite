@@ -147,7 +147,8 @@ export default function HauptLayout({ children, hideRight = false, rightContent 
 
                   <div className="kachel">
                     <h3>Kontakt</h3>
-                    <p><a href="mailto:hochlandimkereiheistern@freenet.de">hochlandimkereiheistern@freenet.de</a></p>
+                    <p>Ihr habt Fragen zu unserem Honig oder unserer Imkerei? Wir freuen uns auf eure Nachricht.</p>
+                    <a href="/contact" className="kachel-button">➜ Kontakt aufnehmen</a>
                   </div>
                 </>
               )}
