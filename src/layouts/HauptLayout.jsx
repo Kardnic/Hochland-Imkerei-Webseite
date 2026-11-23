@@ -127,12 +127,14 @@ export default function HauptLayout({ children, hideRight = false, rightContent 
                     </div>
                   )}
 
-                  <div className="kachel">
+                  <div className="kachel standort-kachel">
+                    <div className="standort-icon" aria-hidden="true">⌖</div>
                     <h3>Hier findet ihr uns</h3>
-                    <div className="google-map map-placeholder">
-                      <p>Standort der Hochland Imkerei Heistern</p>
-                      <a href="https://www.google.com/maps/search/?api=1&query=Hochland%20Imkerei%20Heistern" target="_blank" rel="noopener noreferrer">Standort in Google Maps öffnen</a>
-                    </div>
+                    <p className="standort-ort">Hochland Imkerei Heistern</p>
+                    <p className="standort-region">Heistern · Langerwehe</p>
+                    <a className="standort-link" href="https://www.google.com/maps/search/?api=1&query=Hochland%20Imkerei%20Heistern" target="_blank" rel="noopener noreferrer" aria-label="Standort der Hochland Imkerei Heistern in Google Maps anzeigen">
+                      Standort auf Google Maps ansehen <span aria-hidden="true">↗</span>
+                    </a>
                   </div>
                   <a href="/neuigkeiten">
                   <div className="kachel">
