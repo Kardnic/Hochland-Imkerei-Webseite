@@ -128,7 +128,6 @@ export default function HauptLayout({ children, hideRight = false, rightContent 
                   )}
 
                   <div className="kachel standort-kachel">
-                    <div className="standort-icon" aria-hidden="true">⌖</div>
                     <h3>Hier findet ihr uns</h3>
                     <p className="standort-ort">Hochland Imkerei Heistern</p>
                     <p className="standort-region">Heistern · Langerwehe</p>
