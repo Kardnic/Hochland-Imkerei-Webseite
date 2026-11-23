@@ -132,6 +132,15 @@ export default function HauptLayout({ children, hideRight = false, rightContent 
                     <h3>Hier findet ihr uns</h3>
                     <p className="standort-ort">Hochland Imkerei Heistern</p>
                     <p className="standort-region">Heistern · Langerwehe</p>
+                    <div className="standort-karte">
+                      <iframe
+                        title="Google Maps – Hochland Imkerei Heistern"
+                        src="https://www.google.com/maps?q=Hochland%20Imkerei%20Heistern%2C%20Langerwehe&output=embed"
+                        loading="lazy"
+                        referrerPolicy="no-referrer-when-downgrade"
+                        allowFullScreen
+                      />
+                    </div>
                     <a className="standort-link" href="https://www.google.com/maps/search/?api=1&query=Hochland%20Imkerei%20Heistern" target="_blank" rel="noopener noreferrer" aria-label="Standort der Hochland Imkerei Heistern in Google Maps anzeigen">
                       Standort auf Google Maps ansehen <span aria-hidden="true">↗</span>
                     </a>
